@@ -931,6 +931,15 @@ body.hide-brand .brandmark{opacity:0;}
 .tsnote{margin-top:20px;display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);
   font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--w5);
   background:var(--w06);border:1px solid var(--w1);border-radius:20px;padding:7px 15px;}
+.exrow{margin-top:20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.exrow .tsnote{margin-top:0;}
+.ex-go{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(180deg,var(--crimson),var(--mid));
+  color:#fff;border:none;border-radius:20px;padding:11px 20px;cursor:pointer;
+  font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  transition:transform .14s,box-shadow .14s;}
+.ex-go:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(200,50,74,.4);}
+a.ex-open{color:var(--w5);text-decoration:none;cursor:pointer;transition:color .14s,border-color .14s,transform .14s;}
+a.ex-open:hover{color:#fff;border-color:rgba(200,50,74,.55);transform:translateY(-1px);}
 .caution{border-color:rgba(233,196,106,.42)!important;background:linear-gradient(135deg,rgba(233,196,106,.10),rgba(233,196,106,.02))!important;border-left:3px solid #E9C46A!important;}
 .caution .al{color:#E9C46A!important;}
 /* Decorative blur glows sit outside the slide box (b2 is bottom:-180px), which makes every
@@ -1118,15 +1127,6 @@ body.hide-brand .brandmark{opacity:0;}
 </div>
 </div>
 
-<div class="slide" id="break1" data-min="10">
-<div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="brkslide">
-  <div class="bs-eye">Break</div>
-  <div class="bs-h">Stretch and Reset</div>
-  <div class="brk-clock">10:00</div>
-  <div class="bs-sub">10 minutes — back on time, please</div>
-</div>
-</div>
-
 <div class="slide" id="draw">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
 <div class="topic-tab b">Two volunteers</div>
@@ -1196,17 +1196,18 @@ body.hide-brand .brandmark{opacity:0;}
 </div>
 </div>
 
-<div class="slide" id="s14">
+<div class="slide" id="s14" data-exmin="8">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
-<div class="topic-tab b">Exercise</div>
-<h2 class="demo-h sm b">Exercise: Your First Prompt</h2>
-<p class="lead b">8 minutes</p>
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab L1.1 — First Contact</h2>
+<p class="lead b">8 minutes · in the Day 1 lab</p>
 <div class="road b">
-    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Open Claude</div><div class="rd">This is the tool we're using for the whole program.</div></div></div>
-    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Ask one real question</div><div class="rd">Pick something from your actual to-do list today.</div></div></div>
-    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Read the answer closely</div><div class="rd">Decide: is it correct? Is it useful as it is?</div></div></div>
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Open the Day 1 lab — Task L1.1</div><div class="rd">It's linked from the Day 1 page. Your notes save in your browser.</div></div></div>
+    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Pick ONE starter prompt and run it in Claude</div><div class="rd">Eight starters in the lab, tap to copy. Any of them is fine — this is a confidence exercise.</div></div></div>
+    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Read the result closely</div><div class="rd">Would you actually use it? That is the bar. Note one thing that surprised you.</div></div></div>
+    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Finished early? Take the stretch</div><div class="rd">Steer the result without rewriting your prompt: “Make it shorter.” → “Make it warmer.”</div></div></div>
 </div>
-<div><span class="tsnote b">Task Sheet 1</span></div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(480)">▶ Start 8:00</button><a class="tsnote ex-open" href="coded-alshaya-day-1-lab.html#t1" target="_blank" rel="noopener">Open lab task L1.1 ↗</a></div>
 </div>
 </div>
 
@@ -1235,12 +1236,12 @@ body.hide-brand .brandmark{opacity:0;}
 </div>
 </div>
 
-<div class="slide" id="break2" data-min="10">
+<div class="slide" id="break2" data-min="15">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="brkslide">
   <div class="bs-eye">Break</div>
   <div class="bs-h">Stretch and Reset</div>
-  <div class="brk-clock">10:00</div>
-  <div class="bs-sub">10 minutes — back on time, please</div>
+  <div class="brk-clock">15:00</div>
+  <div class="bs-sub">15 minutes — back on time, please</div>
 </div>
 </div>
 
@@ -1345,26 +1346,18 @@ body.hide-brand .brandmark{opacity:0;}
 </div>
 </div>
 
-<div class="slide" id="s27">
+<div class="slide" id="s27" data-exmin="12">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
-<div class="topic-tab b">Practice</div>
-<h2 class="demo-h sm b">Practice: Build Your Own CTFT Prompt</h2>
-<p class="lead b">10 minutes</p>
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab L1.2 — Build a CTFT Prompt</h2>
+<p class="lead b">12 minutes · in the Day 1 lab</p>
 <div class="road b">
-    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Pick a real task</div><div class="rd">Something due this week.</div></div></div>
-    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Write all four parts</div><div class="rd">Context, Task, Format, Tone.</div></div></div>
-    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Run it in Claude and check</div><div class="rd">Does the result match all four parts you asked for?</div></div></div>
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Choose your scenario in the lab</div><div class="rd">Scenario A (leasing) or Scenario B (maintenance) — both sample data.</div></div></div>
+    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Read the stand-in document, fill the four fields</div><div class="rd">Context, Task, Format, Tone — the lab assembles them into one prompt.</div></div></div>
+    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Copy the assembled prompt, run it in Claude</div><div class="rd">The lab has a Test in Claude button.</div></div></div>
+    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Compare the answer with the document</div><div class="rd">Did it miss anything? Did it invent anything? Flag both in the capture box.</div></div></div>
 </div>
-<div><span class="tsnote b">Task Sheet 2</span></div>
-</div>
-</div>
-
-<div class="slide" id="break3" data-min="10">
-<div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="brkslide">
-  <div class="bs-eye">Break</div>
-  <div class="bs-h">Stretch and Reset</div>
-  <div class="brk-clock">10:00</div>
-  <div class="bs-sub">10 minutes — back on time, please</div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(720)">▶ Start 12:00</button><a class="tsnote ex-open" href="coded-alshaya-day-1-lab.html#t2" target="_blank" rel="noopener">Open lab task L1.2 ↗</a></div>
 </div>
 </div>
 
@@ -1474,17 +1467,33 @@ body.hide-brand .brandmark{opacity:0;}
 </div>
 </div>
 
-<div class="slide" id="s33">
+<div class="slide" id="s33" data-exmin="15">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
-<div class="topic-tab b">Exercise</div>
-<h2 class="demo-h sm b">Exercise: Draft a Professional Document</h2>
-<p class="lead b">15 minutes</p>
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab L1.3 — Draft a Professional Document</h2>
+<p class="lead b">15 minutes · in the Day 1 lab</p>
 <div class="road b">
-    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Choose your scenario</div><div class="rd">A memo, a tenant notice, or an update email.</div></div></div>
-    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Write a full CTFT prompt</div><div class="rd">Use today's framework.</div></div></div>
-    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Draft, then rewrite it</div><div class="rd">Fix the tone, cut the length, check every fact.</div></div></div>
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Pick a brief in the lab — or use your own real task</div><div class="rd">A staff memo, a tenant notice, or a status update. Tap to copy.</div></div></div>
+    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Write a full CTFT prompt for it</div><div class="rd">Do not skip Format or Tone.</div></div></div>
+    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Generate the draft, then edit by hand</div><div class="rd">Fix the tone, check every fact and number, cut anything repeated.</div></div></div>
+    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Read your final version out loud once</div><div class="rd">If you stumble, so will the reader.</div></div></div>
 </div>
-<div><span class="tsnote b">Task Sheet 3</span></div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(900)">▶ Start 15:00</button><a class="tsnote ex-open" href="coded-alshaya-day-1-lab.html#t3" target="_blank" rel="noopener">Open lab task L1.3 ↗</a></div>
+</div>
+</div>
+
+<div class="slide" id="ex14" data-exmin="10">
+<div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab L1.4 — Rewrite It: Tone and Length</h2>
+<p class="lead b">10 minutes · in the Day 1 lab</p>
+<div class="road b">
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Copy the clunky paragraph from the lab into Claude</div><div class="rd">You already have a draft — now change it without starting over.</div></div></div>
+    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Run the six rewrite commands, in order</div><div class="rd">Same conversation. Do not start a new chat.</div></div></div>
+    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Notice what survives every version</div><div class="rd">That is the actual message.</div></div></div>
+    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Capture the version you would send</div><div class="rd">And note who you would send it to.</div></div></div>
+</div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(600)">▶ Start 10:00</button><a class="tsnote ex-open" href="coded-alshaya-day-1-lab.html#t4" target="_blank" rel="noopener">Open lab task L1.4 ↗</a></div>
 </div>
 </div>
 
@@ -1537,18 +1546,33 @@ body.hide-brand .brandmark{opacity:0;}
 </div>
 </div>
 
-<div class="slide" id="s39">
+<div class="slide" id="ex15" data-exmin="10">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
-<div class="topic-tab b">Exercise</div>
-<h2 class="demo-h sm b">Exercise: Summarize a Real Document</h2>
-<p class="lead b">12 minutes</p>
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab L1.5 — Tame the Thread</h2>
+<p class="lead b">10 minutes · in the Day 1 lab</p>
 <div class="road b">
-    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Download the quarterly report</div><div class="rd">Five pages of sample data — safe to upload. It's in the lab.</div></div></div>
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Copy the five-email thread from the lab</div><div class="rd">A long thread you have been copied into — sample data.</div></div></div>
+    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Ask for the summary you actually need</div><div class="rd">Decisions made, questions still open, and who owns each action.</div></div></div>
+    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Check the summary against the thread</div><div class="rd">Did it miss anything? Did it invent an owner?</div></div></div>
+    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Draft your reply, then rewrite it once for tone</div><div class="rd">The reply goes to the regional director.</div></div></div>
+</div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(600)">▶ Start 10:00</button><a class="tsnote ex-open" href="coded-alshaya-day-1-lab.html#t5" target="_blank" rel="noopener">Open lab task L1.5 ↗</a></div>
+</div>
+</div>
+
+<div class="slide" id="s39" data-exmin="12">
+<div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab L1.6 — Summarize and Verify</h2>
+<p class="lead b">12 minutes · in the Day 1 lab</p>
+<div class="road b">
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Download the quarterly report from the lab</div><div class="rd">Five pages of sample data — safe to upload. Attach it to Claude.</div></div></div>
     <div class="ritem b"><div class="rn">2</div><div><div class="rt">Ask for a one-page summary</div><div class="rd">Use a full CTFT prompt. Say what shape you need.</div></div></div>
     <div class="ritem b"><div class="rn">3</div><div><div class="rt">Check three numbers by hand</div><div class="rd">Against the report, not against the summary.</div></div></div>
     <div class="ritem b"><div class="rn">4</div><div><div class="rt">Find a planted mistake</div><div class="rd">There are five in there. One is enough.</div></div></div>
 </div>
-<div><span class="tsnote b">Task Sheet 4</span></div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(720)">▶ Start 12:00</button><a class="tsnote ex-open" href="coded-alshaya-day-1-lab.html#t6" target="_blank" rel="noopener">Open lab task L1.6 ↗</a></div>
 </div>
 </div>
 
@@ -1579,7 +1603,7 @@ body.hide-brand .brandmark{opacity:0;}
 
 <div id="prail-wrap"><div id="prail"></div></div>
 <a class="deck-back" href="coded-alshaya-day-1.html">‹ Day 1</a>
-<div id="extimer"><span class="ex-lbl">Exercise</span><span class="ex-time" id="ex-time">1:00</span></div>
+<div id="extimer"><span class="ex-lbl">Exercise</span><span class="ex-time" id="ex-time">2:00</span></div>
 <div class="nav-dots" id="nav-dots"></div>
 <div class="deck-nav">
   <button class="nav-btn" onclick="prev()" aria-label="Previous">‹</button>
@@ -1601,7 +1625,7 @@ body.hide-brand .brandmark{opacity:0;}
   <div class="help-row"><div class="keys"><kbd>B</kbd><kbd>.</kbd></div><div class="what">Blank the screen</div></div>
   <div class="help-row"><div class="keys"><kbd>F</kbd></div><div class="what">Fullscreen</div></div>
   <div class="help-row"><div class="keys"><kbd>S</kbd></div><div class="what">Sound on / off (starts off)</div></div>
-  <div class="help-row"><div class="keys"><kbd>T</kbd></div><div class="what">Start 60-second exercise timer</div></div>
+  <div class="help-row"><div class="keys"><kbd>T</kbd></div><div class="what">Start the exercise timer (task length on a lab slide, otherwise 2:00)</div></div>
   <div class="help-row"><div class="keys"><kbd>?</kbd></div><div class="what">This panel</div></div>
   <div class="help-row"><div class="keys"><kbd>Esc</kbd></div><div class="what">Close / resume</div></div>
   <div class="hint">Most USB presenter remotes send Page&nbsp;Up / Page&nbsp;Down — they already drive this deck.</div>
@@ -1634,7 +1658,7 @@ body.hide-brand .brandmark{opacity:0;}
 var slides=[].slice.call(document.querySelectorAll('.slide'));
 var total=slides.length,idx=0;
 document.getElementById('pos-tot').textContent=total;
-var TITLES=["Title", "Cold-open", "Your dreaded tasks", "01 \u00b7 Foundations", "What is AI", "What is an LLM", "What makes it large", "The models", "Why you should care", "Strong vs weak", "What is safe to type", "Example \u00b7 memo", "Example \u00b7 report", "Call-back question", "Break 1", "Describe &amp; draw", "The shape", "The segue", "02 \u00b7 First prompts", "Exercise 1", "Good prompt", "Weak vs strong", "Break 2", "03 \u00b7 CTFT", "CTFT", "C = Context", "T = Task", "F = Format", "T = Tone", "Role &amp; constraints", "Zero vs few-shot", "CTFT in action", "Practice \u00b7 CTFT", "Break 3", "04 \u00b7 Writing", "Three moves", "1 \u00b7 Draft", "2 \u00b7 Rewrite tone", "2 \u00b7 Rewrite length", "Iterative prompting", "3 \u00b7 Summarize", "Email with Claude", "Connect your inbox", "Exercise 2", "Break 4", "05 \u00b7 Review", "Pre-send check", "Research assistant", "Example \u00b7 20 pages", "Exercise 3", "Wrap", "End"],SECS={};
+var TITLES=["Title", "Cold-open", "Your dreaded tasks", "01 \u00b7 Foundations", "What is AI", "What is an LLM", "What makes it large", "The models", "Why you should care", "Strong vs weak", "What is safe to type", "Example \u00b7 memo", "Example \u00b7 report", "Call-back question", "Describe &amp; draw", "The shape", "The segue", "02 \u00b7 First prompts", "Lab L1.1", "Good prompt", "Weak vs strong", "Break 1", "03 \u00b7 CTFT", "CTFT", "C = Context", "T = Task", "F = Format", "T = Tone", "Role &amp; constraints", "Zero vs few-shot", "CTFT in action", "Lab L1.2", "04 \u00b7 Writing", "Three moves", "1 \u00b7 Draft", "2 \u00b7 Rewrite tone", "2 \u00b7 Rewrite length", "Iterative prompting", "3 \u00b7 Summarize", "Email with Claude", "Connect your inbox", "Lab L1.3", "Lab L1.4", "Break 2", "05 \u00b7 Review", "Pre-send check", "Research assistant", "Example \u00b7 20 pages", "Lab L1.5", "Lab L1.6", "Wrap", "End"],SECS={};
 for(var _i=0;_i<slides.length;_i++){if(/^sec\d+$/.test(slides[_i].id))SECS[_i]=1;}
 var dc=document.getElementById('nav-dots');
 for(var i=0;i<total;i++){var d=document.createElement('button');
@@ -1670,7 +1694,7 @@ function closeOverlays(){var h=document.getElementById('help');if(h)h.classList.
 document.addEventListener('keydown',function(e){
   if(e.target.tagName==='INPUT')return;
   if(e.key==='s'||e.key==='S'){toggleSound();e.preventDefault();return;}
-  if(e.key==='t'||e.key==='T'){exStart(120);e.preventDefault();return;}
+  if(e.key==='t'||e.key==='T'){var _em=slides[idx].dataset.exmin;exStart(_em?+_em*60:120);e.preventDefault();return;}
   if(e.key==='l'||e.key==='L'){toggleLaser();e.preventDefault();return;}
   if(e.key==='b'||e.key==='B'||e.key==='.'){toggleBlank();e.preventDefault();return;}
   if(e.key==='?'||(e.shiftKey&&e.key==='/')){toggleHelp();e.preventDefault();return;}

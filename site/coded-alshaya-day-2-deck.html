@@ -930,6 +930,15 @@ body.hide-brand .brandmark{opacity:0;}
   color:var(--rose);margin-top:22px;letter-spacing:-2px;font-variant-numeric:tabular-nums;}
 .brkslide .bs-sub{margin-top:14px;font-size:15px;color:var(--w5);font-family:var(--mono);letter-spacing:.06em;}
 
+.exrow{margin-top:20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.exrow .tsnote{margin-top:0;}
+.ex-go{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(180deg,var(--crimson),var(--mid));
+  color:#fff;border:none;border-radius:20px;padding:11px 20px;cursor:pointer;
+  font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  transition:transform .14s,box-shadow .14s;}
+.ex-go:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(200,50,74,.4);}
+a.ex-open{color:var(--w5);text-decoration:none;cursor:pointer;transition:color .14s,border-color .14s,transform .14s;}
+a.ex-open:hover{color:#fff;border-color:rgba(200,50,74,.55);transform:translateY(-1px);}
 .tsnote{margin-top:20px;display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);
   font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--w5);
   background:var(--w06);border:1px solid var(--w1);border-radius:20px;padding:7px 15px;}
@@ -972,8 +981,8 @@ body.hide-brand .brandmark{opacity:0;}
 <div class="slide" id="s1">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
 <h2 class="demo-h b">Callback: yesterday's <span class="hl">CTFT prompt</span></h2>
-<div class="anchor b">You wrote Context, Task, Format and Tone for one real document. Today you reuse that exact structure twice more — once to build a presentation, once to question a set of data.</div>
-<div class="keyline b">Same framework. <b>Two new outputs.</b></div>
+<div class="anchor b">You wrote Context, Task, Format and Tone for one real document. Today you reuse that exact structure all day — to build a presentation, to question a set of data, and to screen a shortlist.</div>
+<div class="keyline b">Same framework. <b>New outputs.</b></div>
 </div>
 </div>
 
@@ -1077,27 +1086,42 @@ body.hide-brand .brandmark{opacity:0;}
 </div>
 </div>
 
-<div class="slide" id="s11">
+<div class="slide" id="s11" data-exmin="15">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
-<div class="topic-tab b">Exercise</div>
-<h2 class="demo-h sm b">Exercise: generate a presentation</h2>
-<p class="lead b">15 minutes</p>
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab D2.1 — Report to Deck</h2>
+<p class="lead b">15 minutes · in the Day 2 lab</p>
 <div class="road b">
-    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Pick a real topic</div><div class="rd">Something you would actually present at work this month.</div></div></div>
-    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Write a full prompt</div><div class="rd">Type and length, topic and key points, audience and purpose, tone.</div></div></div>
-    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Build it in both tools</div><div class="rd">Claude Design first, then the same prompt in Gamma.</div></div></div>
-    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Check every slide</div><div class="rd">Look for anything wrong, missing, or out of order.</div></div></div>
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Attach yesterday's quarterly report to a new Claude chat</div><div class="rd">Download it from the lab — the same five-page PDF you verified yesterday.</div></div></div>
+    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Write your own CTFT prompt, then ask Claude to design it</div><div class="rd">A six-slide management summary for the operations director.</div></div></div>
+    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Open two slides and check every figure against the PDF</div><div class="rd">A deck that looks right but misquotes a number is worse than no deck.</div></div></div>
+    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Fix one slide by hand</div><div class="rd">So you feel where Claude stops and you start.</div></div></div>
 </div>
-<div><span class="tsnote b">Task Sheet 1</span></div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(900)">▶ Start 15:00</button><a class="tsnote ex-open" href="coded-alshaya-day-2-lab.html#t1" target="_blank" rel="noopener">Open lab task D2.1 ↗</a></div>
 </div>
 </div>
 
-<div class="slide" id="break1" data-min="10">
+<div class="slide" id="ex22" data-exmin="10">
+<div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab D2.2 — Same Prompt, Different Tool</h2>
+<p class="lead b">10 minutes · in the Day 2 lab</p>
+<div class="road b">
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Copy the exact prompt you wrote in D2.1</div><div class="rd">The point is the prompt, not the product.</div></div></div>
+    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Generate the deck in Gamma</div><div class="rd">Pick a theme, let it build.</div></div></div>
+    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Put the two decks side by side</div><div class="rd">Which produced the better first draft? Which needed less fixing?</div></div></div>
+    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Export the Gamma deck to PowerPoint</div><div class="rd">See what shifts — spacing, fonts, charts.</div></div></div>
+</div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(600)">▶ Start 10:00</button><a class="tsnote ex-open" href="coded-alshaya-day-2-lab.html#t2" target="_blank" rel="noopener">Open lab task D2.2 ↗</a></div>
+</div>
+</div>
+
+<div class="slide" id="break1" data-min="15">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="brkslide">
   <div class="bs-eye">Break</div>
   <div class="bs-h">Stretch and Reset</div>
-  <div class="brk-clock">10:00</div>
-  <div class="bs-sub">10 minutes — back on time, please</div>
+  <div class="brk-clock">15:00</div>
+  <div class="bs-sub">15 minutes — back on time, please</div>
 </div>
 </div>
 
@@ -1158,15 +1182,6 @@ body.hide-brand .brandmark{opacity:0;}
 </div>
 </div>
 
-<div class="slide" id="break2" data-min="10">
-<div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="brkslide">
-  <div class="bs-eye">Break</div>
-  <div class="bs-h">Stretch and Reset</div>
-  <div class="brk-clock">10:00</div>
-  <div class="bs-sub">10 minutes — back on time, please</div>
-</div>
-</div>
-
 <div class="slide" id="sec3">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="secwrap">
   <div class="secnum b">03</div>
@@ -1207,34 +1222,25 @@ body.hide-brand .brandmark{opacity:0;}
 </div>
 </div>
 
-<div class="slide" id="s21">
+<div class="slide" id="s21" data-exmin="20">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
-<div class="topic-tab b">Exercise</div>
-<h2 class="demo-h sm b">Exercise: employee satisfaction survey</h2>
-<p class="lead b">20 minutes</p>
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab D2.3 — Finance: Monthly Performance</h2>
+<p class="lead b">20 minutes · in the Day 2 lab</p>
 <div class="road b">
-    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Paste the sample survey into Claude</div><div class="rd">12 responses across four departments. Sample data, not real records.</div></div></div>
-    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Ask three questions</div><div class="rd">One CTFT prompt each — averages, gaps between scores, the biggest concern.</div></div></div>
-    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Recalculate one average by hand</div><div class="rd">Pick one number Claude gave you and check it yourself.</div></div></div>
-    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Note whether it matched</div><div class="rd">Write down what you checked and what you found.</div></div></div>
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Download the workbook from the lab, upload it to Claude</div><div class="rd">Six sheets of sample data — safe to upload. Start with Occupancy &amp; Income.</div></div></div>
+    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Work the three steps — one CTFT prompt each</div><div class="rd">Find the trend, rank the budget variances, draft the management summary.</div></div></div>
+    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Verify against the sheet</div><div class="rd">Recalculate at least one variance by hand before you trust it.</div></div></div>
+    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Record what you found in the lab</div><div class="rd">If a bullet has no number behind it, it does not go in.</div></div></div>
 </div>
-<div><span class="tsnote b">Task Sheet 2</span></div>
-</div>
-</div>
-
-<div class="slide" id="break3" data-min="10">
-<div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="brkslide">
-  <div class="bs-eye">Break</div>
-  <div class="bs-h">Stretch and Reset</div>
-  <div class="brk-clock">10:00</div>
-  <div class="bs-sub">10 minutes — back on time, please</div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(1200)">▶ Start 20:00</button><a class="tsnote ex-open" href="coded-alshaya-day-2-lab.html#t3" target="_blank" rel="noopener">Open lab task D2.3 ↗</a></div>
 </div>
 </div>
 
 <div class="slide" id="sec4">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="secwrap">
   <div class="secnum b">04</div>
-  <div class="sech b">Budget Analysis &amp; the AI + Excel Hybrid</div>
+  <div class="sech b">Facilities Data &amp; the AI + Excel Hybrid</div>
   <div class="secrule b"></div>
 </div>
 </div>
@@ -1247,18 +1253,18 @@ body.hide-brand .brandmark{opacity:0;}
 </div>
 </div>
 
-<div class="slide" id="s24">
+<div class="slide" id="s24" data-exmin="20">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
-<div class="topic-tab b">Exercise</div>
-<h2 class="demo-h sm b">Exercise: budget analysis</h2>
-<p class="lead b">20 minutes</p>
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab D2.4 — Facilities: Logs to Report</h2>
+<p class="lead b">20 minutes · in the Day 2 lab</p>
 <div class="road b">
-    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Paste the sample budget into Claude</div><div class="rd">Five categories, planned against actual. Sample data.</div></div></div>
-    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Ask for the variances, ranked</div><div class="rd">Actual minus planned, largest overspend to largest underspend.</div></div></div>
-    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Confirm the top variance yourself</div><div class="rd">Recalculate it in Excel or on paper before you trust it.</div></div></div>
-    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Separate fact from guess</div><div class="rd">Ask why it happened — then mark that answer as a guess until someone checks.</div></div></div>
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Point Claude at the Maintenance Log sheet</div><div class="rd">68 raw tickets in the same workbook — no cleaning, no pivot tables.</div></div></div>
+    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Write the weekly management report</div><div class="rd">Open tickets by category, anything ageing, contractor performance, what needs a decision.</div></div></div>
+    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Verify the counts yourself</div><div class="rd">Against the sheet, before you trust the write-up.</div></div></div>
+    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Draft the tenant notice about the lift work</div><div class="rd">Under 120 words. Clear and calm, apologise once — not three times.</div></div></div>
 </div>
-<div><span class="tsnote b">Task Sheet 3</span></div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(1200)">▶ Start 20:00</button><a class="tsnote ex-open" href="coded-alshaya-day-2-lab.html#t4" target="_blank" rel="noopener">Open lab task D2.4 ↗</a></div>
 </div>
 </div>
 
@@ -1312,18 +1318,33 @@ body.hide-brand .brandmark{opacity:0;}
 </div>
 </div>
 
-<div class="slide" id="s29">
+<div class="slide" id="ex25" data-exmin="20">
 <div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
-<div class="topic-tab b">Exercise</div>
-<h2 class="demo-h sm b">Exercise: build your prompt library</h2>
-<p class="lead b">15 minutes</p>
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab D2.5 — HR: Screening Support</h2>
+<p class="lead b">20 minutes · in the Day 2 lab</p>
 <div class="road b">
-    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Collect today's three best prompts</div><div class="rd">The presentation, the survey analysis, the budget analysis.</div></div></div>
-    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Add one from your own department</div><div class="rd">Something you will genuinely reuse next week.</div></div></div>
-    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Give each one a title and a note</div><div class="rd">What it is for, and which tool it worked best in.</div></div></div>
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Point Claude at the Candidates sheet</div><div class="rd">12 candidates in the workbook — IDs only, deliberately no names.</div></div></div>
+    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Build a reusable candidate-summary template</div><div class="rd">With [PLACEHOLDERS], so it works for any candidate and any role.</div></div></div>
+    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Screen one role against clear criteria</div><div class="rd">Meets / partly meets / does not meet — with one line of reasoning each.</div></div></div>
+    <div class="ritem b"><div class="rn">4</div><div><div class="rt">Draft eight interview questions</div><div class="rd">The hiring decision never leaves the hiring manager.</div></div></div>
+</div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(1200)">▶ Start 20:00</button><a class="tsnote ex-open" href="coded-alshaya-day-2-lab.html#t5" target="_blank" rel="noopener">Open lab task D2.5 ↗</a></div>
+</div>
+</div>
+
+<div class="slide" id="s29" data-exmin="15">
+<div class="bg-grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="slide-pad ">
+<div class="topic-tab b">Lab</div>
+<h2 class="demo-h sm b">Lab D2.6 — Build Your Prompt Library</h2>
+<p class="lead b">15 minutes · in the Day 2 lab</p>
+<div class="road b">
+    <div class="ritem b"><div class="rn">1</div><div><div class="rt">Collect the prompts that worked best today</div><div class="rd">The deck, the finance summary, the facilities report, the screening template.</div></div></div>
+    <div class="ritem b"><div class="rn">2</div><div><div class="rt">Save four things for each</div><div class="rd">A title, the full CTFT prompt with [PLACEHOLDERS], the best tool, and what you fixed.</div></div></div>
+    <div class="ritem b"><div class="rn">3</div><div><div class="rt">Add one prompt for your own department</div><div class="rd">Something you will genuinely reuse next week.</div></div></div>
     <div class="ritem b"><div class="rn">4</div><div><div class="rt">Save it where you will find it</div><div class="rd">A document, a notes app, a shared drive — anywhere but your memory.</div></div></div>
 </div>
-<div><span class="tsnote b">Task Sheet 4</span></div>
+<div class="exrow b"><button class="ex-go" onclick="exStart(900)">▶ Start 15:00</button><a class="tsnote ex-open" href="coded-alshaya-day-2-lab.html#t6" target="_blank" rel="noopener">Open lab task D2.6 ↗</a></div>
 </div>
 </div>
 
@@ -1333,7 +1354,7 @@ body.hide-brand .brandmark{opacity:0;}
 <h2 class="demo-h sm b">Three things you can <span class="hl">use on Sunday.</span></h2>
 <div class="oc-list">
     <div class="oc-item b"><div class="oc-check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"></path></svg></div><div class="oc-txt">A <b>presentation</b> generated in two tools and reviewed properly</div></div>
-    <div class="oc-item b"><div class="oc-check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"></path></svg></div><div class="oc-txt">Two <b>data analyses</b>, each with one number verified by hand</div></div>
+    <div class="oc-item b"><div class="oc-check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"></path></svg></div><div class="oc-txt">Three <b>department use cases</b> — Finance, Facilities and HR — verified against the workbook</div></div>
     <div class="oc-item b"><div class="oc-check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"></path></svg></div><div class="oc-txt">The start of a <b>reusable prompt library</b>, built around your own job</div></div>
 </div>
 <div class="keyline b">Tomorrow: put all three days together into one implementation package.</div>
@@ -1354,7 +1375,7 @@ body.hide-brand .brandmark{opacity:0;}
 
 <div id="prail-wrap"><div id="prail"></div></div>
 <a class="deck-back" href="coded-alshaya-day-2.html">‹ Day 2</a>
-<div id="extimer"><span class="ex-lbl">Exercise</span><span class="ex-time" id="ex-time">1:00</span></div>
+<div id="extimer"><span class="ex-lbl">Exercise</span><span class="ex-time" id="ex-time">2:00</span></div>
 <div class="nav-dots" id="nav-dots"></div>
 <div class="deck-nav">
   <button class="nav-btn" onclick="prev()" aria-label="Previous">‹</button>
@@ -1376,7 +1397,7 @@ body.hide-brand .brandmark{opacity:0;}
   <div class="help-row"><div class="keys"><kbd>B</kbd><kbd>.</kbd></div><div class="what">Blank the screen</div></div>
   <div class="help-row"><div class="keys"><kbd>F</kbd></div><div class="what">Fullscreen</div></div>
   <div class="help-row"><div class="keys"><kbd>S</kbd></div><div class="what">Sound on / off (starts off)</div></div>
-  <div class="help-row"><div class="keys"><kbd>T</kbd></div><div class="what">Start 60-second exercise timer</div></div>
+  <div class="help-row"><div class="keys"><kbd>T</kbd></div><div class="what">Start the exercise timer (task length on a lab slide, otherwise 2:00)</div></div>
   <div class="help-row"><div class="keys"><kbd>?</kbd></div><div class="what">This panel</div></div>
   <div class="help-row"><div class="keys"><kbd>Esc</kbd></div><div class="what">Close / resume</div></div>
   <div class="hint">Most USB presenter remotes send Page&nbsp;Up / Page&nbsp;Down — they already drive this deck.</div>
@@ -1409,7 +1430,7 @@ body.hide-brand .brandmark{opacity:0;}
 var slides=[].slice.call(document.querySelectorAll('.slide'));
 var total=slides.length,idx=0;
 document.getElementById('pos-tot').textContent=total;
-var TITLES=["Title", "Callback to Day 1", "Cold-open", "01 \u00b7 Presentations", "The problem", "The tools", "The hybrid approach", "Demo \u00b7 Claude Design", "Demo \u00b7 Gamma", "Prompt anatomy", "Weak vs strong", "Exercise 1", "Break 1", "02 \u00b7 Review", "Group discussion", "When to use what", "Advanced features", "Before real data", "Break 2", "03 \u00b7 Data", "The data problem", "Can and cannot", "Best practice", "Exercise 2", "Break 3", "04 \u00b7 Budget", "Why hybrid", "Exercise 3", "Break 4", "05 \u00b7 Libraries", "Why save prompts", "A good saved prompt", "By department", "Exercise 4", "Wrap", "End"],SECS={};
+var TITLES=["Title", "Callback to Day 1", "Cold-open", "01 \u00b7 Presentations", "The problem", "The tools", "The hybrid approach", "Demo \u00b7 Claude Design", "Demo \u00b7 Gamma", "Prompt anatomy", "Weak vs strong", "Lab D2.1", "Lab D2.2", "Break 1", "02 \u00b7 Review", "Group discussion", "When to use what", "Advanced features", "Before real data", "03 \u00b7 Data", "The data problem", "Can and cannot", "Best practice", "Lab D2.3", "04 \u00b7 Facilities", "Why hybrid", "Lab D2.4", "Break 2", "05 \u00b7 Libraries", "Why save prompts", "A good saved prompt", "By department", "Lab D2.5", "Lab D2.6", "Wrap", "End"],SECS={};
 for(var _i=0;_i<slides.length;_i++){if(/^sec\d+$/.test(slides[_i].id))SECS[_i]=1;}
 var dc=document.getElementById('nav-dots');
 for(var i=0;i<total;i++){var d=document.createElement('button');
@@ -1445,7 +1466,7 @@ function closeOverlays(){var h=document.getElementById('help');if(h)h.classList.
 document.addEventListener('keydown',function(e){
   if(e.target.tagName==='INPUT')return;
   if(e.key==='s'||e.key==='S'){toggleSound();e.preventDefault();return;}
-  if(e.key==='t'||e.key==='T'){exStart(120);e.preventDefault();return;}
+  if(e.key==='t'||e.key==='T'){var _em=slides[idx].dataset.exmin;exStart(_em?+_em*60:120);e.preventDefault();return;}
   if(e.key==='l'||e.key==='L'){toggleLaser();e.preventDefault();return;}
   if(e.key==='b'||e.key==='B'||e.key==='.'){toggleBlank();e.preventDefault();return;}
   if(e.key==='?'||(e.shiftKey&&e.key==='/')){toggleHelp();e.preventDefault();return;}

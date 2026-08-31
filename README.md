@@ -30,7 +30,6 @@ If Vercel asks during import: **Framework preset** = Other, **Output Directory**
 | `coded-alshaya-day-1.html` | Day 1 plan — brief, run of show, resources |
 | `coded-alshaya-day-1-deck.html` | Day 1 deck · 52 slides |
 | `coded-alshaya-day-1-lab.html` | Day 1 trainee lab · 6 tasks |
-| `coded-alshaya-day-1-answer-key.html` | **Instructor only** — the five planted faults |
 | `alshaya-quarterly-operations-report.pdf` | Day 1 exercise document · 5 pages, sample data |
 | `coded-alshaya-day-2.html` | Day 2 plan |
 | `coded-alshaya-day-2-deck.html` | Day 2 deck · 36 slides |
@@ -48,8 +47,9 @@ portfolio, and they reconcile with each other by design. Nothing here is an Alsh
 Al-Injaz record.
 
 The quarterly report contains **five deliberate factual faults** for the Day 1 verification
-exercise. They are documented in `coded-alshaya-day-1-answer-key.html` — do not hand that
-page to trainees.
+exercise. They are documented in `instructor/coded-alshaya-day-1-answer-key.html` — kept
+**outside `site/`** on purpose, so it never deploys and trainees cannot stumble on it.
+Open it locally when running the L1.6 debrief.
 
 ## Rebuilding
 
