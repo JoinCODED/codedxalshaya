@@ -3,9 +3,10 @@
   "configurations": [
     {
       "name": "workshop-site",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8777", "--directory", "site"],
-      "port": 8777
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "exec python3 -m http.server \"${PORT:-8777}\" --directory site"],
+      "port": 8777,
+      "autoPort": true
     }
   ]
 }
