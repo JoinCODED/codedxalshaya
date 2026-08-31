@@ -1,0 +1,71 @@
+{
+  "title": "AI in Workflow for Professionals",
+  "code": "ALSHAYA",
+  "client": "Alshaya Property Development Co. & Al-Injaz Contracting Company",
+  "audience": "client",
+  "instructor": "Ali Taqi",
+  "dates": "Tuesday 1 – Thursday 3 September 2026",
+  "timing": "09:00 – 13:00 daily",
+  "duration": "3 days · 4 hours daily · 12 hours total",
+  "location": "CODED Campus, Kuwait",
+  "participants": "Up to 10 trainees",
+  "format": "In-person",
+  "level": "Beginner-friendly · no coding required",
+
+  "branding": {
+    "mode": "partner",
+    "partner_name": "Alshaya",
+    "partner_logo": null,
+    "_logo_note": "No Alshaya logo supplied — hero/footer use a Manrope wordmark. Drop a PNG/SVG in and swap the .partner-mark span for an <img> to upgrade.",
+    "red_ramp": {
+      "maroon": "#5D181A", "mid": "#8B1E2A", "crimson": "#C8324A", "rose": "#E0566E", "rose_lt": "#EC8B9C"
+    }
+  },
+
+  "deliverables": {
+    "landing": true, "day_pages": true,
+    "decks": "pending — trainee supplying slides",
+    "trainee_labs": "pending", "instructor_labs": "pending",
+    "presenter_notes": "pending", "answer_key": "pending",
+    "lab_walkthrough": "pending", "instructor_solutions": "pending",
+    "cheat_sheet": "pending", "practice_quiz": "pending",
+    "exam": "pending", "facilitator_kit": "pending", "workshop_index": "pending"
+  },
+
+  "days": [
+    { "n": 1, "title": "AI Quickstart & The Art of Prompting",
+      "topics": [
+        {"id":"t1","name":"Introduction to AI & LLMs"},
+        {"id":"t2","name":"First Hands-On Prompts"},
+        {"id":"t3","name":"The CTFT Framework"},
+        {"id":"t4","name":"Writing & Communication With AI"},
+        {"id":"t5","name":"Reviewing, Editing & Improving Outputs"},
+        {"id":"t6","name":"Research & Summaries"}
+      ], "lab_challenges": 6 },
+    { "n": 2, "title": "Presentations, Data & Prompt Libraries",
+      "topics": [
+        {"id":"t1","name":"AI for Presentations"},
+        {"id":"t2","name":"Presentation Review & Discussion"},
+        {"id":"t3","name":"Advanced Gamma Features"},
+        {"id":"t4","name":"Data Analysis With AI"},
+        {"id":"t5","name":"Data-Analysis Best Practices"},
+        {"id":"t6","name":"Prompt Libraries & Templates"},
+        {"id":"t7","name":"Department-Specific Applications"}
+      ], "lab_challenges": 6 },
+    { "n": 3, "title": "The Capstone Project",
+      "topics": [
+        {"id":"t1","name":"Phase 0 — Planning"},
+        {"id":"t2","name":"Executive Briefing"},
+        {"id":"t3","name":"Gamma Presentation"},
+        {"id":"t4","name":"Data Visualisations"},
+        {"id":"t5","name":"Communication Package"},
+        {"id":"t6","name":"Final Presentation & Q&A"}
+      ], "lab_challenges": 0 }
+  ],
+
+  "deploy": {
+    "host": "netlify_dragdrop",
+    "day_page_filename": "coded-alshaya-day-<n>.html",
+    "landing": "index.html"
+  }
+}

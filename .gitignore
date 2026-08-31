@@ -1,0 +1,10 @@
+# build artefact — regenerate with `zip -r alshaya-workshop-site.zip site`
+alshaya-workshop-site.zip
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# macOS
+.DS_Store

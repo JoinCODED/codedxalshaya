@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Answer Key · The Five Planted Faults — CODED × Alshaya</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%230A0507%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%227%22%20fill%3D%22%23C8324A%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#0A0507; --surf:#150A0D; --surf2:#1C0E12; --card:#130A0C;
+  --maroon:#5D181A; --mid:#8B1E2A; --crimson:#C8324A; --rose:#E0566E; --rose-lt:#EC8B9C;
+  --ink:#F5F0F1; --ink-dim:#AEA2A5; --ink-faint:#76696C;
+  --w9:rgba(255,255,255,.9); --w8:rgba(255,255,255,.82); --w6:rgba(255,255,255,.58);
+  --w5:rgba(255,255,255,.46); --w4:rgba(255,255,255,.34); --w2:rgba(255,255,255,.16);
+  --w1:rgba(255,255,255,.09); --w06:rgba(255,255,255,.06);
+  --line:rgba(255,255,255,.08); --amber:#E9C46A; --green-lt:#8FE6AE;
+  --f:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(1100px 640px at 85% -8%,rgba(200,50,74,.12),transparent 60%),var(--base);
+  color:var(--ink);font-family:var(--f);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.bar{position:sticky;top:0;z-index:30;background:rgba(10,5,7,.9);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);padding:14px 0}
+.bar .in{max-width:900px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:14px}
+.backlink{font-weight:700;font-size:13px;color:var(--w6);background:var(--w06);
+  border:1px solid var(--w1);border-radius:8px;padding:6px 11px}
+.backlink:hover{color:var(--ink)}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.3px;font-size:16px}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:var(--crimson);box-shadow:0 0 10px var(--crimson)}
+.brand b{color:var(--rose-lt);font-weight:800}
+.wrap{max-width:900px;margin:0 auto;padding:38px 28px 80px}
+.eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--rose);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:32px;height:1px;background:var(--crimson)}
+h1{font-size:clamp(30px,4.4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.06;margin:18px 0 14px}
+.lede{font-size:16px;line-height:1.62;color:var(--ink-dim);max-width:660px}
+.warn{margin-top:22px;background:linear-gradient(135deg,rgba(233,196,106,.10),rgba(233,196,106,.02));
+  border:1px solid rgba(233,196,106,.34);border-left:3px solid var(--amber);border-radius:12px;padding:16px 20px}
+.warn .k{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--amber);margin-bottom:7px}
+.warn p{font-size:14.5px;line-height:1.55;color:var(--w8)}
+h2{font-size:18px;font-weight:700;letter-spacing:-.01em;margin:44px 0 4px}
+.h2sub{font-size:13.5px;color:var(--ink-faint);margin-bottom:10px}
+.card{background:linear-gradient(180deg,var(--surf2),var(--surf));border:1px solid var(--w1);
+  border-left:3px solid var(--crimson);border-radius:16px;padding:20px 22px 18px;margin-top:18px}
+.ch-top{display:flex;align-items:center;gap:12px;margin-bottom:11px;flex-wrap:wrap}
+.num{font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:var(--crimson);
+  border-radius:6px;padding:4px 9px}
+.cat{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--rose-lt)}
+.where{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--w5)}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.3px;margin-bottom:10px}
+.rows{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+.row{display:flex;gap:13px;align-items:flex-start;border-radius:11px;padding:12px 15px;font-size:14.5px;line-height:1.5}
+.row .m{font-family:var(--mono);font-weight:700;font-size:14px;flex:none}
+.row.says{background:var(--w06);border:1px solid var(--w1);color:var(--w6)}
+.row.says .m{color:var(--w4)}
+.row.truth{background:rgba(200,50,74,.10);border:1px solid rgba(200,50,74,.32);color:var(--w9)}
+.row.truth .m{color:var(--rose)}
+.row b{color:#fff;font-weight:700}
+.point{margin-top:14px;background:rgba(233,196,106,.07);border:1px solid rgba(233,196,106,.26);
+  border-radius:11px;padding:13px 16px;font-size:14px;line-height:1.5;color:var(--w8)}
+.point .k{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--amber);margin-bottom:6px}
+.tbl{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+.tbl th{text-align:left;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--rose-lt);padding:10px 12px;border-bottom:1px solid var(--w2)}
+.tbl td{padding:11px 12px;border-bottom:1px solid var(--w06);color:var(--w8);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td:first-child{font-family:var(--mono);font-size:12px;color:var(--rose-lt);white-space:nowrap}
+.foot{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:12px;color:var(--ink-faint);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="bar"><div class="in">
+  <a class="backlink" href="coded-alshaya-day-1.html">‹ Day 1</a>
+  <span class="brand"><span class="dot"></span>Answer <b>Key</b></span>
+</div></div>
+
+<div class="wrap">
+  <div class="eyebrow">Instructor only · Day 1 · Task L1.6</div>
+  <h1>The five planted faults</h1>
+  <p class="lede">Every fault in the Quarterly Property Operations Report is deliberate. This page tells you
+  what they are, where they hide, and what each one teaches. Trainees find them; you confirm them.</p>
+
+  <div class="warn">
+    <div class="k">Do not hand this out</div>
+    <p>Give trainees the PDF only. If they see this page first, the exercise is over — the whole point is
+    that they discover the errors by checking, not by being told. Reveal it in the debrief.</p>
+  </div>
+
+  <h2>At a glance</h2>
+  <div class="h2sub">Ranked by how often trainees miss them.</div>
+  <table class="tbl">
+    <tr><th>Ref</th><th>Fault</th><th>Section</th><th>Difficulty</th></tr>
+    <tr><td>F-01</td><td>Rent roll total does not equal its components</td><td>§3 table + §1</td><td>Easy — if they add up</td></tr>
+    <tr><td>F-02</td><td>Retail occupancy stated as two different numbers</td><td>§1 vs §3</td><td>Moderate</td></tr>
+    <tr><td>F-03</td><td>Action item with no owner and a due date already past</td><td>§10, row A-07</td><td>Easy — if they read the log</td></tr>
+    <tr><td>F-04</td><td>A decision reported as approved that was only proposed</td><td>§1 vs §5</td><td>Hard — the dangerous one</td></tr>
+    <tr><td>F-05</td><td>Handover date that the stated timeline cannot produce</td><td>§5</td><td>Hard</td></tr>
+  </table>
+
+  <h2>The faults in full</h2>
+
+  <div class="card">
+    <div class="ch-top"><span class="num">F-01</span><span class="cat">Arithmetic</span>
+      <span class="where">§3 Occupancy and income · §1 Executive summary</span></div>
+    <h3>The rent roll total is wrong</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">Report says</span><div>Portfolio total annualised rent roll <b>KWD 4,720,000</b>. The executive summary repeats it as “KWD 4.72 million”.</div></div>
+      <div class="row truth"><span class="m">Actually</span><div>1,940,000 + 2,610,000 = <b>KWD 4,550,000</b>. The report overstates income by <b>KWD 170,000</b>.</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>Claude will almost always repeat the stated total, because it reads the total as a fact rather than as a sum. Any number that is a total of other numbers has to be re-added by a person. This is the single most common way a wrong figure reaches a board pack.</div>
+  </div>
+
+  <div class="card">
+    <div class="ch-top"><span class="num">F-02</span><span class="cat">Internal contradiction</span>
+      <span class="where">§1 Executive summary vs §3 table</span></div>
+    <h3>Retail occupancy is both 78% and 75%</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">§1 says</span><div>“Occupancy across the retail asset held at <b>78%</b> for the quarter.”</div></div>
+      <div class="row truth"><span class="m">§3 says</span><div><b>75.0%</b> — and 36 let out of 48 units confirms 75%. The executive summary is the wrong one.</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>Ask which number Claude used in its summary. It usually takes the executive summary, because that text is nearer the top and reads more authoritative. The detail table is the source of truth; the summary is someone’s interpretation of it.</div>
+  </div>
+
+  <div class="card">
+    <div class="ch-top"><span class="num">F-03</span><span class="cat">Missing owner</span>
+      <span class="where">§10 Action log, row A-07</span></div>
+    <h3>An action nobody owns, already overdue</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">Report says</span><div>A-07 “Reallocate unspent marketing budget” — Owner <b>TBC</b>, Due <b>30 Jun 2026</b>, Status Open.</div></div>
+      <div class="row truth"><span class="m">Actually</span><div>The report is dated <b>15 July 2026</b>. The action was already two weeks overdue when the report was written, and no one is accountable for it. It is also the KWD 47,000 in §4 and a recommendation in §11 — three mentions, no owner.</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>Ask Claude “who owns each action?” and watch it either skip A-07 or quietly assign it to the Facilities Lead. Inventing a plausible owner is more dangerous than leaving a blank, because a blank gets noticed.</div>
+  </div>
+
+  <div class="card">
+    <div class="ch-top"><span class="num">F-04</span><span class="cat">Phantom decision</span>
+      <span class="where">§1 Executive summary vs §5 Construction</span></div>
+    <h3>A decision that was never actually made</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">§1 says</span><div>“<b>The Board approved the revised handover date</b> at its June sitting. The tenant has been kept informed.”</div></div>
+      <div class="row truth"><span class="m">§5 says</span><div>The date “has been <b>proposed</b> to the Board… It has <b>not been ratified</b> by the Board, and it has <b>not been confirmed to the tenant in writing</b>.”</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>This is the one that matters. A summary built from §1 will state a Board approval that does not exist — and that summary goes into a board pack, where someone acts on it. Separating <b>what was decided</b> from <b>what was proposed</b> is the reason the L1.5 prompt asks for those as two different lists. Most trainees miss this one; make sure the room sees it before the day ends.</div>
+  </div>
+
+  <div class="card">
+    <div class="ch-top"><span class="num">F-05</span><span class="cat">Impossible timeline</span>
+      <span class="where">§5 Construction</span></div>
+    <h3>The handover date cannot happen</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">Report says</span><div>Joinery delivered <b>2 June 2026</b>. Contractor requires <b>six weeks</b> from delivery to practical completion. Revised handover: <b>10 July 2026</b>.</div></div>
+      <div class="row truth"><span class="m">Actually</span><div>2 June + six weeks = <b>14 July 2026</b> at the earliest. The stated handover is four days before the work can finish. Either the date is wrong or the six-week duration is.</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>All three facts sit in the same small table, and Claude still will not flag the conflict — it reports each row faithfully without doing the arithmetic across them. Dates are just numbers; they need the same check as money.</div>
+  </div>
+
+  <h2>Running the debrief</h2>
+  <div class="h2sub">Roughly four minutes, at the end of Section 5.</div>
+  <div class="card">
+    <div class="ch-top"><span class="num">1</span><span class="cat">Ask before you tell</span></div>
+    <h3>“What did you find?”</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">→</span><div>Collect what the room found first. Most tables land F-01 or F-03. Write them up.</div></div>
+      <div class="row truth"><span class="m">→</span><div>Then reveal F-04. Ask what would have happened if that summary had gone to the Board unchecked. That question is the close of the day.</div></div>
+    </div>
+    <div class="point"><div class="k">The takeaway to name</div>AI reads the document. <b>You are still the one who is accountable for what it says.</b></div>
+  </div>
+
+  <div class="foot">
+    <span>CODED × Alshaya · Day 1 · Instructor answer key</span>
+    <span>Sample data — fictional portfolio</span>
+  </div>
+</div>
+</body>
+</html>

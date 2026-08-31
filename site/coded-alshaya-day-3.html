@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 3 · The Capstone Project — CODED × Alshaya</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%230A0507%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%227%22%20fill%3D%22%23C8324A%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#0A0507; --card:#130A0C; --card-2:#190E11;
+  --ink:#F5F0F1; --ink-dim:#AEA2A5; --ink-faint:#76696C;
+  --deep:#3A0D14; --maroon:#5D181A; --mid:#8B1E2A; --crimson:#C8324A; --rose:#E0566E;
+  --line:rgba(255,255,255,.07); --line-2:rgba(255,255,255,.13);
+  --f:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--base);color:var(--ink);font-family:var(--f);
+  -webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+.topbar{position:relative;z-index:5;padding:26px 0 0}
+.back{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;color:var(--ink-dim);
+  transition:color .15s,transform .15s}
+.back:hover{color:var(--ink)}
+.back .ar{transition:transform .15s}.back:hover .ar{transform:translateX(-3px)}
+
+.hero-wrap{padding:22px 0 0}
+.d-hero{position:relative;border-radius:24px;overflow:hidden;padding:48px 46px 42px;
+  animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.h-d1{background:linear-gradient(135deg,#CF3850 0%,#7C1E2C 100%)}
+.h-d2{background:linear-gradient(135deg,#A32433 0%,#5D181A 100%)}
+.h-d3{background:linear-gradient(135deg,#7E1F2C 0%,#3C0D17 100%)}
+.d-hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:46px 46px;
+  -webkit-mask:radial-gradient(120% 130% at 88% -10%,#000,transparent 70%);
+  mask:radial-gradient(120% 130% at 88% -10%,#000,transparent 70%)}
+.d-hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(80% 120% at 100% 0%,rgba(255,255,255,.10),transparent 55%)}
+.d-hero>*{position:relative;z-index:2}
+.d-hero-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:30px}
+.cat-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 13px;border-radius:999px;
+  background:rgba(0,0,0,.24);font-size:12.5px;font-weight:600;color:#fff;letter-spacing:.02em;backdrop-filter:blur(5px)}
+.cat-pill .dot{width:6px;height:6px;border-radius:50%;background:#fff;opacity:.92}
+.d-logos{display:flex;align-items:center;gap:12px;opacity:.96}
+.d-logos .partner-mark{font-size:14px;font-weight:800;letter-spacing:.15em;color:#fff;line-height:1}
+.d-hero h1{font-weight:800;letter-spacing:-.025em;line-height:1.03;font-size:clamp(34px,5.4vw,58px);color:#fff}
+.d-hero .lede{margin-top:16px;max-width:600px;font-size:clamp(14.5px,1.6vw,17px);line-height:1.6;color:rgba(255,255,255,.86)}
+.d-meta{display:flex;flex-wrap:wrap;gap:9px 26px;margin-top:26px;font-size:14px;font-weight:500;color:rgba(255,255,255,.9)}
+.d-meta span{display:inline-flex;align-items:center;gap:8px}
+.d-meta svg{opacity:.85;flex:none}
+
+.d-grid{display:grid;grid-template-columns:1fr 360px;gap:22px;padding:34px 0 60px;align-items:start}
+@media (max-width:880px){.d-grid{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 26px}
+.panel + .panel{margin-top:20px}
+.panel h2{font-size:18px;font-weight:700;letter-spacing:-.01em}
+.panel h3{font-size:15.5px;font-weight:700;letter-spacing:-.005em}
+.panel .muted{margin-top:6px;font-size:13.5px;color:var(--ink-faint)}
+.panel .brief{margin-top:14px;font-size:15px;line-height:1.62;color:var(--ink-dim)}
+
+.ros{list-style:none;margin:22px 0 0;position:relative}
+.ros::before{content:"";position:absolute;left:15px;top:8px;bottom:8px;width:1.5px;background:var(--line-2)}
+.ros li{position:relative;display:flex;gap:18px;padding:0 0 22px 0}
+.ros li:last-child{padding-bottom:0}
+.ros .num{position:relative;z-index:2;flex:none;width:32px;height:32px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;
+  background:linear-gradient(135deg,var(--crimson),var(--maroon));box-shadow:0 0 0 4px var(--card)}
+.ros .brk{position:relative;z-index:2;flex:none;width:32px;height:32px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;background:var(--card-2);border:1px solid var(--line-2);
+  color:var(--ink-faint);box-shadow:0 0 0 4px var(--card)}
+.ros .rc{flex:1;padding-top:5px}
+.ros .rt{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.ros .rt b{font-size:14.5px;font-weight:600;color:var(--ink)}
+.ros .time{font-size:12px;font-weight:600;color:var(--ink-faint);font-variant-numeric:tabular-nums;flex:none}
+.ros .rd{margin-top:4px;font-size:13.5px;line-height:1.5;color:var(--ink-dim)}
+.ros li.is-brk .rt b{color:var(--ink-dim);font-weight:500}
+
+.leave{list-style:none;margin:16px 0 0;display:flex;flex-direction:column;gap:13px}
+.leave li{display:flex;gap:11px;font-size:14px;line-height:1.45;color:var(--ink)}
+.leave svg{color:var(--crimson);flex:none;margin-top:1px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip2{display:inline-flex;padding:7px 12px;border-radius:999px;background:var(--card-2);
+  border:1px solid var(--line);font-size:12.5px;font-weight:500;color:var(--ink-dim)}
+
+.cta-panel{background:linear-gradient(150deg,rgba(200,50,74,.12),rgba(123,30,40,.06));
+  border-color:rgba(200,50,74,.3)}
+.cta-ico{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;
+  background:rgba(200,50,74,.16);color:var(--rose);margin-bottom:14px}
+.cta-panel p{margin-top:7px;font-size:13.5px;line-height:1.55;color:var(--ink-dim)}
+.slides-btn{margin-top:18px;display:flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px;border-radius:12px;color:#fff;font-size:14.5px;font-weight:600;
+  background:linear-gradient(135deg,var(--crimson),var(--maroon));
+  box-shadow:0 8px 26px rgba(200,50,74,.32);transition:transform .18s,box-shadow .18s}
+.slides-btn:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(200,50,74,.46)}
+.slides-btn .ar{transition:transform .18s}.slides-btn:hover .ar{transform:translateX(4px)}
+.slides-btn.soon{background:var(--card-2);border:1px dashed var(--line-2);color:var(--ink-faint);
+  box-shadow:none;cursor:default;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.slides-btn.soon:hover{transform:none;box-shadow:none}
+
+.res-list{display:flex;flex-direction:column;margin-top:10px}
+.res{display:flex;align-items:center;gap:13px;padding:13px 4px;border-bottom:1px solid var(--line);
+  transition:padding .15s}
+.res:last-child{border-bottom:0}
+.res:hover{padding-left:8px}
+.res-ic{width:30px;height:30px;border-radius:8px;flex:none;display:flex;align-items:center;justify-content:center;
+  background:var(--card-2);border:1px solid var(--line);color:var(--rose)}
+.res-nm{flex:1;font-size:14px;font-weight:600;color:var(--ink)}
+.res-tag{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+
+.site-foot{position:relative;border-top:1px solid var(--line);padding:46px 0 40px}
+.foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+.f-lockup{display:flex;align-items:center;gap:13px}
+.f-lockup .coded-logo{height:19px;width:auto;display:block}
+.f-lockup .partner-mark{font-size:15px;font-weight:800;letter-spacing:.15em;color:var(--ink);line-height:1}
+.f-lockup .x{color:var(--ink-faint);font-size:13px}
+.foot-row .copy{font-size:13px;color:var(--ink-faint)}
+
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.d-hero{animation:none}}
+
+.cat-pill,.d-meta,.muted,.res-tag,.copy,.ros .time{font-family:var(--mono)}
+.cat-pill,.res-tag{letter-spacing:.05em}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar"><a class="back" href="index.html"><span class="ar">←</span> Back to the programme</a></div>
+  </div>
+
+  <div class="wrap hero-wrap">
+    <div class="d-hero h-d3">
+      <div class="d-hero-top">
+        <span class="cat-pill"><span class="dot"></span> Day 3 · Deliver</span>
+        <div class="d-logos"><span class="partner-mark">CODED × ALSHAYA</span></div>
+      </div>
+      <h1>The Capstone Project</h1>
+      <p class="lede">One scenario, one dataset, one team. Produce a complete implementation package using everything from the first two days — then stand up and present it.</p>
+      <div class="d-meta">
+        <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/></svg> Thursday 3 September 2026</span>
+        <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg> 09:00 – 13:00</span>
+        <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.5c0 6.5-9 12.5-9 12.5s-9-6-9-12.5a9 9 0 0118 0z"/><circle cx="12" cy="10.5" r="3"/></svg> CODED Campus, Kuwait</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="d-grid">
+      <div class="d-main">
+        <section class="panel">
+          <h2>Day brief</h2>
+          <p class="brief">No new tools today. You get a scenario and a dataset, assign roles, plan the workflow, and build a real implementation package: a one-page executive briefing, a five-to-six slide stakeholder presentation in Gamma, a data analysis with two to three visualisations and written insights, and a communication package with a reusable template set. Each team then presents for nine to ten minutes and takes questions. The point is not a perfect deliverable — it is proving to yourself that the workflow holds up under a deadline.</p>
+        </section>
+        <section class="panel">
+          <h2>Run of show</h2>
+          <p class="muted">A guide, not a script — timings flex to the room.</p>
+          <ol class="ros">
+<li><span class="num">1</span><div class="rc"><div class="rt"><b>Phase 0 — Planning</b><span class="time">09:00</span></div><div class="rd">Read the scenario, review the dataset, assign roles across the team, and agree the workflow before anyone opens a tool.</div></div></li>
+<li><span class="num">2</span><div class="rc"><div class="rt"><b>Build block 1 — Briefing &amp; presentation</b><span class="time">09:30</span></div><div class="rd">Deliverable 1: the one-page executive briefing — situation, key findings, recommendation, implementation, expected outcomes, next steps. Deliverable 2: the Gamma deck.</div></div></li>
+<li class="is-brk"><span class="brk"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13v5a5 5 0 01-5 5H9a5 5 0 01-5-5z"/><path d="M17 9h2a2.5 2.5 0 010 5h-2"/></svg></span><div class="rc"><div class="rt"><b>Break</b><span class="time">10:25</span></div></div></li>
+<li><span class="num">3</span><div class="rc"><div class="rt"><b>Build block 2 — Visualisations &amp; comms</b><span class="time">10:40</span></div><div class="rd">Deliverable 3: choose the insights that matter, build two to three charts, write the summaries, and drop them into the deck. Deliverable 4: internal email, public FAQ, one-page fact sheet, three reusable prompt templates.</div></div></li>
+<li><span class="num">4</span><div class="rc"><div class="rt"><b>Rehearse</b><span class="time">11:40</span></div><div class="rd">Assemble the package, run the presentation once end to end, and cut whatever does not earn its place.</div></div></li>
+<li class="is-brk"><span class="brk"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13v5a5 5 0 01-5 5H9a5 5 0 01-5-5z"/><path d="M17 9h2a2.5 2.5 0 010 5h-2"/></svg></span><div class="rc"><div class="rt"><b>Break</b><span class="time">12:05</span></div></div></li>
+<li><span class="num">5</span><div class="rc"><div class="rt"><b>Final presentations &amp; Q&amp;A</b><span class="time">12:15</span></div><div class="rd">Nine to ten minutes per team — title, problem, data insights, recommended solution, implementation and budget, next steps — then questions from the room.</div></div></li>
+<li><span class="num">6</span><div class="rc"><div class="rt"><b>Close</b><span class="time">12:55</span></div><div class="rd">What you are taking back to your desk on Sunday morning.</div></div></li>
+          </ol>
+        </section>
+      </div>
+
+      <aside class="d-side">
+        <section class="panel">
+          <h3>What you'll leave able to do</h3>
+          <ul class="leave">
+<li><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span>Run a full AI-assisted workflow from brief to finished package.</span></li>
+<li><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span>Write an executive briefing that leads with the recommendation.</span></li>
+<li><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span>Turn a dataset into two to three charts that carry an argument.</span></li>
+<li><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span>Present the work and defend it in Q&amp;A.</span></li>
+          </ul>
+        </section>
+        <section class="panel">
+          <h3>What we'll cover</h3>
+          <div class="chips">
+<span class="chip2">Scenario &amp; dataset</span>
+<span class="chip2">Role assignment</span>
+<span class="chip2">Executive briefing</span>
+<span class="chip2">Gamma deck</span>
+<span class="chip2">2–3 visualisations</span>
+<span class="chip2">Internal email</span>
+<span class="chip2">Public FAQ</span>
+<span class="chip2">Fact sheet</span>
+<span class="chip2">Prompt templates</span>
+<span class="chip2">Team pitch &amp; Q&amp;A</span>
+          </div>
+        </section>
+        <section class="panel cta-panel">
+          <div class="cta-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>Day 3 slides</h3>
+          <p>The Day 3 deck — the scenario, the deliverable specs, the timings, and the presentation rubric.</p>
+          <span class="slides-btn soon">Coming soon</span>
+        </section>
+        <section class="panel cta-panel">
+          <div class="cta-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v6.5L4.6 18A2 2 0 006.3 21h11.4a2 2 0 001.7-3L14 9.5V3"/><path d="M9 3h6M7.5 15h9"/></svg></div>
+          <h3>Day 3 hands-on</h3>
+          <p>The capstone workspace — scenario brief, dataset, deliverable checklists, and the presentation running order.</p>
+          <span class="slides-btn soon">Coming soon</span>
+        </section>
+        <section class="panel">
+          <h3>Resources &amp; links</h3>
+          <div class="res-list">
+<a class="res" href="coded-alshaya-day-1.html"><span class="res-ic"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg></span><span class="res-nm">Day 1 · Prompt</span><span class="res-tag">Day plan</span></a>
+<a class="res" href="coded-alshaya-day-2.html"><span class="res-ic"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg></span><span class="res-nm">Day 2 · Produce</span><span class="res-tag">Day plan</span></a>
+<a class="res" href="index.html"><span class="res-ic"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg></span><span class="res-nm">Programme overview</span><span class="res-tag">Overview</span></a>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-row">
+        <div class="f-lockup">
+          <img class="coded-logo" src="data:image/png;base64,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" alt="CODED">
+          <span class="x">×</span>
+          <span class="partner-mark">ALSHAYA</span>
+        </div>
+        <span class="copy">© 2026 CODED × Alshaya · CODED Campus, Kuwait</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
