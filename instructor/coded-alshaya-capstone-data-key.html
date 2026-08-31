@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Capstone Key · Seven Planted Inconsistencies — CODED × Alshaya</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%230A0507%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%227%22%20fill%3D%22%23C8324A%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#0A0507; --surf:#150A0D; --surf2:#1C0E12; --card:#130A0C;
+  --maroon:#5D181A; --mid:#8B1E2A; --crimson:#C8324A; --rose:#E0566E; --rose-lt:#EC8B9C;
+  --ink:#F5F0F1; --ink-dim:#AEA2A5; --ink-faint:#76696C;
+  --w9:rgba(255,255,255,.9); --w8:rgba(255,255,255,.82); --w6:rgba(255,255,255,.58);
+  --w5:rgba(255,255,255,.46); --w4:rgba(255,255,255,.34); --w2:rgba(255,255,255,.16);
+  --w1:rgba(255,255,255,.09); --w06:rgba(255,255,255,.06);
+  --line:rgba(255,255,255,.08); --amber:#E9C46A; --green-lt:#8FE6AE;
+  --f:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(1100px 640px at 85% -8%,rgba(200,50,74,.12),transparent 60%),var(--base);
+  color:var(--ink);font-family:var(--f);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.bar{position:sticky;top:0;z-index:30;background:rgba(10,5,7,.9);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);padding:14px 0}
+.bar .in{max-width:900px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:14px}
+.backlink{font-weight:700;font-size:13px;color:var(--w6);background:var(--w06);
+  border:1px solid var(--w1);border-radius:8px;padding:6px 11px}
+.backlink:hover{color:var(--ink)}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.3px;font-size:16px}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:var(--crimson);box-shadow:0 0 10px var(--crimson)}
+.brand b{color:var(--rose-lt);font-weight:800}
+.wrap{max-width:900px;margin:0 auto;padding:38px 28px 80px}
+.eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--rose);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:32px;height:1px;background:var(--crimson)}
+h1{font-size:clamp(30px,4.4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.06;margin:18px 0 14px}
+.lede{font-size:16px;line-height:1.62;color:var(--ink-dim);max-width:660px}
+.warn{margin-top:22px;background:linear-gradient(135deg,rgba(233,196,106,.10),rgba(233,196,106,.02));
+  border:1px solid rgba(233,196,106,.34);border-left:3px solid var(--amber);border-radius:12px;padding:16px 20px}
+.warn .k{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--amber);margin-bottom:7px}
+.warn p{font-size:14.5px;line-height:1.55;color:var(--w8)}
+h2{font-size:18px;font-weight:700;letter-spacing:-.01em;margin:44px 0 4px}
+.h2sub{font-size:13.5px;color:var(--ink-faint);margin-bottom:10px}
+.card{background:linear-gradient(180deg,var(--surf2),var(--surf));border:1px solid var(--w1);
+  border-left:3px solid var(--crimson);border-radius:16px;padding:20px 22px 18px;margin-top:18px}
+.ch-top{display:flex;align-items:center;gap:12px;margin-bottom:11px;flex-wrap:wrap}
+.num{font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:var(--crimson);
+  border-radius:6px;padding:4px 9px}
+.cat{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--rose-lt)}
+.where{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--w5)}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.3px;margin-bottom:10px}
+.rows{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+.row{display:flex;gap:13px;align-items:flex-start;border-radius:11px;padding:12px 15px;font-size:14.5px;line-height:1.5}
+.row .m{font-family:var(--mono);font-weight:700;font-size:14px;flex:none}
+.row.says{background:var(--w06);border:1px solid var(--w1);color:var(--w6)}
+.row.says .m{color:var(--w4)}
+.row.truth{background:rgba(200,50,74,.10);border:1px solid rgba(200,50,74,.32);color:var(--w9)}
+.row.truth .m{color:var(--rose)}
+.row b{color:#fff;font-weight:700}
+.point{margin-top:14px;background:rgba(233,196,106,.07);border:1px solid rgba(233,196,106,.26);
+  border-radius:11px;padding:13px 16px;font-size:14px;line-height:1.5;color:var(--w8)}
+.point .k{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--amber);margin-bottom:6px}
+.tbl{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+.tbl th{text-align:left;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--rose-lt);padding:10px 12px;border-bottom:1px solid var(--w2)}
+.tbl td{padding:11px 12px;border-bottom:1px solid var(--w06);color:var(--w8);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td:first-child{font-family:var(--mono);font-size:12px;color:var(--rose-lt);white-space:nowrap}
+.foot{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:12px;color:var(--ink-faint);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="bar"><div class="in">
+  <a class="backlink" href="../site/coded-alshaya-day-3.html">‹ Day 3</a>
+  <span class="brand"><span class="dot"></span>Capstone <b>Key</b></span>
+</div></div>
+
+<div class="wrap">
+  <div class="eyebrow">Instructor only · Day 3 · Scenario workbooks</div>
+  <h1>The seven planted inconsistencies</h1>
+  <p class="lede">Each capstone scenario workbook (alshaya-capstone-s1.xlsx … s7.xlsx) carries exactly one
+  deliberate inconsistency — between its sheets, or against its own totals. Every fault is catchable
+  inside the team’s own file. The workbook README tells teams a fault exists; this page tells you
+  what it is.</p>
+
+  <div class="warn">
+    <div class="k">Do not hand this out</div>
+    <p>Teams know their workbook contains one planted inconsistency — that is printed on every
+    workbook’s README — but not what it is. Confirm catches during the builds; reveal any misses
+    in the Q&amp;A after each team presents.</p>
+  </div>
+
+  <h2>At a glance</h2>
+  <div class="h2sub">One per team, all catchable without leaving their own workbook. S4 and S5 are the quickest; S1 and S7 need a cross-sheet check.</div>
+  <table class="tbl">
+    <tr><th>Ref</th><th>Team</th><th>Fault</th><th>Catch it by</th></tr>
+    <tr><td>A-S1</td><td>S1 · Contractor Turnaround</td><td>Summary credits Contractor B with 6 June closures; the log shows 1</td><td>Counting June closures in the Maintenance Log sheet</td></tr>
+    <tr><td>A-S2</td><td>S2 · Cost Control</td><td>Maintenance months sum to 52,900 against a 52,300 quarter</td><td>Adding the three months</td></tr>
+    <tr><td>A-S3</td><td>S3 · Upper-Floor Push</td><td>Rows show 13 vacant units; the summary and Occupancy sheet say 12 (F1-09)</td><td>Counting the Vacant rows</td></tr>
+    <tr><td>A-S4</td><td>S4 · Hiring Sprint</td><td>Agency long-list has C-03 at 8 years; the register says 12</td><td>Diffing the two candidate sheets</td></tr>
+    <tr><td>A-S5</td><td>S5 · Engagement Turnaround</td><td>A 13th comment (E13) for a 12-response survey</td><td>Counting rows</td></tr>
+    <tr><td>A-S6</td><td>S6 · Tenant Confidence</td><td>CMP-056 links to ticket MT-097, which does not exist</td><td>Verifying linked tickets against the log sheet</td></tr>
+    <tr><td>A-S7</td><td>S7 · Launch Readiness</td><td>Schedule says joinery “actual” 26 May; Project Facts says 2 June</td><td>Cross-checking dates between the two sheets</td></tr>
+  </table>
+
+  <h2>The inconsistencies in full</h2>
+
+  <div class="card">
+    <div class="ch-top"><span class="num">A-S1</span><span class="cat">Cross-sheet</span>
+      <span class="where">alshaya-capstone-s1.xlsx · SLA &amp; Attendance vs Maintenance Log</span></div>
+    <h3>Contractor B’s June closures are inflated</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">Workbook says</span><div>The June summary on the SLA &amp; Attendance sheet credits <b>[CONTRACTOR B]</b> with <b>6 tickets closed in June</b>.</div></div>
+      <div class="row truth"><span class="m">Actually</span><div>The workbook’s own Maintenance Log shows B closed exactly <b>1</b> ticket in June — the last on <b>3 June</b> — while holding 15 open tickets. (D and In-house also closed 1 each; those figures are honest.)</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>This is the contractor’s own claimed number, and it flatters them. The log in the same file is the source of truth. Teams that catch it get their briefing’s sharpest line: “the contractor reports six June closures; the log shows one.”</div>
+  </div>
+  <div class="card">
+    <div class="ch-top"><span class="num">A-S2</span><span class="cat">Arithmetic</span>
+      <span class="where">alshaya-capstone-s2.xlsx · Cost Detail (Apr–Jun rows) vs Budget vs Actual</span></div>
+    <h3>The maintenance months do not add up</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">Workbook says</span><div>Property Maintenance actuals for Apr, May and Jun: 14,800 + 16,200 + 21,900 = <b>KWD 52,900</b>.</div></div>
+      <div class="row truth"><span class="m">Actually</span><div>The Budget vs Actual sheet in the same file says <b>KWD 52,300</b> for the quarter. The monthly detail overstates by <b>KWD 600</b> — and every other category reconciles exactly.</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>Same lesson as F-01, one level down: a detail sheet that disagrees with its own total. Every other category reconciles exactly, so a team that checks one column of sums finds it.</div>
+  </div>
+  <div class="card">
+    <div class="ch-top"><span class="num">A-S3</span><span class="cat">Counting</span>
+      <span class="where">alshaya-capstone-s3.xlsx · Unit Vacancy Schedule vs its summary</span></div>
+    <h3>One unit too many is marked vacant</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">Workbook says</span><div>The unit rows show <b>35 let / 13 vacant</b>. Unit <b>F1-09</b> is marked Vacant.</div></div>
+      <div class="row truth"><span class="m">Actually</span><div>The summary line on the same sheet — and the Occupancy &amp; Income sheet in the same file — say <b>36 let / 12 vacant (75.0%)</b>. F1-09 is let on the rent roll; the schedule was not updated.</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>Ask Claude to count vacant units from the rows and it will say 13, contradicting the 75% everywhere else. The right move is to flag the conflict, not silently pick a side.</div>
+  </div>
+  <div class="card">
+    <div class="ch-top"><span class="num">A-S4</span><span class="cat">Transcription</span>
+      <span class="where">alshaya-capstone-s4.xlsx · Agency Long-List vs Candidate Register</span></div>
+    <h3>C-03’s experience shrank in transcription</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">Workbook says</span><div>The Agency Long-List gives candidate <b>C-03</b> (Property Manager) <b>8 years</b> of experience.</div></div>
+      <div class="row truth"><span class="m">Actually</span><div>The Candidate Register — the system of record, in the same file — says <b>12 years</b>. The agency’s transcription is wrong.</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>An 8-vs-12 swing moves C-03 across the “6+ years” screen line on nobody’s decision but a typo’s. The lesson: screening data gets verified against the source system before anyone is ruled in or out.</div>
+  </div>
+  <div class="card">
+    <div class="ch-top"><span class="num">A-S5</span><span class="cat">Phantom record</span>
+      <span class="where">alshaya-capstone-s5.xlsx · Survey Comments vs Employee Survey</span></div>
+    <h3>A thirteenth respondent who does not exist</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">Workbook says</span><div>The comments sheet has <b>13 rows</b> — including <b>E13 · Leasing</b>: “Everything is excellent, no changes needed at all.”</div></div>
+      <div class="row truth"><span class="m">Actually</span><div>The Employee Survey sheet in the same file has <b>12 responses</b>, E01–E12. E13 exists nowhere — and it is the single most positive comment in the set.</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>A phantom record that flatters the result is exactly how survey data gets quietly massaged. Teams quoting “13 responses” or the E13 comment have not counted. Small samples get counted by hand.</div>
+  </div>
+  <div class="card">
+    <div class="ch-top"><span class="num">A-S6</span><span class="cat">Broken reference</span>
+      <span class="where">alshaya-capstone-s6.xlsx · Complaint Log vs Maintenance Log</span></div>
+    <h3>A complaint linked to a ticket that does not exist</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">Workbook says</span><div>Complaint <b>CMP-056</b> (AC / HVAC) links to ticket <b>MT-097</b>.</div></div>
+      <div class="row truth"><span class="m">Actually</span><div>The Maintenance Log in the same file runs MT-001–MT-068. <b>MT-097 does not exist.</b> Every other linked ticket resolves.</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>A comms programme built on “every complaint gets a tracked ticket” dies on its first broken reference. Ask Claude to verify every linked ticket against the log — it is one prompt, and only one comes back missing.</div>
+  </div>
+  <div class="card">
+    <div class="ch-top"><span class="num">A-S7</span><span class="cat">Cross-sheet</span>
+      <span class="where">alshaya-capstone-s7.xlsx · Milestone Schedule vs Project Facts</span></div>
+    <h3>The joinery delivery date is a week early</h3>
+    <div class="rows">
+      <div class="row says"><span class="m">Workbook says</span><div>The Milestone Schedule records joinery delivered — <b>actual 26 May 2026</b> — and forecasts practical completion 7 July and handover 14 July from it.</div></div>
+      <div class="row truth"><span class="m">Actually</span><div>The Project Facts sheet in the same file (the confirmed position, from report §5) says joinery was delivered <b>2 June 2026</b>. From 2 June, six weeks runs to <b>14 July</b> at the earliest — practical completion, not handover.</div></div>
+    </div>
+    <div class="point"><div class="k">Land this</div>The schedule is internally consistent and entirely wrong, because rev 4 was never updated after the slip. It also explains the report’s impossible 10 July handover (F-05): someone planned from the stale schedule. Dates get verified at the source, like money.</div>
+  </div>
+
+  <div class="point" style="margin-top:34px"><div class="k">The takeaway to name</div>
+  Same lesson as Day 1, now under deadline pressure: the model reads documents faithfully — including
+  the wrong ones. A team of two with a named verifier catches in minutes what a rushed team ships
+  to a director.</div>
+
+  <div class="foot"><span>CODED × Alshaya · Day 3 · Capstone workbook key</span><span>Sample data — fictional portfolio</span></div>
+</div>
+</body>
+</html>

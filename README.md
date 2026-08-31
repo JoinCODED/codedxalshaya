@@ -8,7 +8,7 @@ Workshop site for **Alshaya Property Development Co.** and **Al-Injaz Contractin
 | **Timing** | 09:00 – 13:00 daily · 12 hours total |
 | **Location** | CODED Campus, Kuwait |
 | **Instructor** | Ali Taqi |
-| **Trainees** | Up to 10, mixed departments |
+| **Trainees** | 14, mixed departments — teams of two on Day 3 |
 | **Tool** | Claude (plus Gamma for presentation variety on Day 2) |
 | **Level** | Beginner-friendly · no coding |
 
@@ -35,7 +35,10 @@ If Vercel asks during import: **Framework preset** = Other, **Output Directory**
 | `coded-alshaya-day-2-deck.html` | Day 2 deck · 36 slides |
 | `coded-alshaya-day-2-lab.html` | Day 2 trainee lab · 6 exercises |
 | `alshaya-day-2-dataset.xlsx` | Day 2 dataset · 6 sheets, sample data |
-| `coded-alshaya-day-3.html` | Day 3 plan (capstone deck and lab still to come) |
+| `coded-alshaya-day-3.html` | Day 3 plan — assessment, capstone, certificates |
+| `coded-alshaya-day-3-deck.html` | Day 3 deck · 26 slides |
+| `coded-alshaya-day-3-lab.html` | Day 3 capstone lab · 6 tasks, 7 team scenarios |
+| `alshaya-capstone-s1.xlsx` … `s7.xlsx` | Day 3 scenario workbooks · one self-contained file per team |
 
 Every page is a single self-contained HTML file — CSS and JS inline, logo as a data URI,
 fonts from Google. No bundler, no dependencies.
@@ -47,9 +50,19 @@ portfolio, and they reconcile with each other by design. Nothing here is an Alsh
 Al-Injaz record.
 
 The quarterly report contains **five deliberate factual faults** for the Day 1 verification
-exercise. They are documented in `instructor/coded-alshaya-day-1-answer-key.html` — kept
-**outside `site/`** on purpose, so it never deploys and trainees cannot stumble on it.
-Open it locally when running the L1.6 debrief.
+exercise, and each Day 3 scenario workbook carries **one planted inconsistency**, catchable
+inside the team's own file (trainees are told one exists, not what it is). Both sets are
+documented in `instructor/` — `coded-alshaya-day-1-answer-key.html` and
+`coded-alshaya-capstone-data-key.html` — kept **outside `site/`** on purpose, so they
+never deploy and trainees cannot stumble on them. Open them locally for the debriefs.
+
+## MAP test
+
+`instructor/coded-alshaya-map-test-key.html` is the answer key for the pre/post knowledge test —
+20 questions, 30 minutes, sat twice: Day 1 before teaching starts, and Day 3 before the capstone.
+The test itself lives in the CODED portal as the draft survey
+**Alshaya MAP Test — AI in Workflow (Pre & Post)** (`alshaya-map-test-ai-in-workflow-pre-post`).
+The key stays outside `site/` with the other instructor material, so it never deploys.
 
 ## Rebuilding
 
@@ -64,9 +77,15 @@ python3 build/build-day-2-deck.py
 python3 build/build-day-2-lab.py
 python3 build/build-day-2-dataset.py   # needs openpyxl
 python3 build/build-ops-report.py      # needs reportlab
+python3 build/build-day-3-deck.py      # clones the Day 2 deck shell
+python3 build/build-day-3-lab.py       # clones the Day 2 lab shell
+python3 build/build-capstone-data.py   # needs openpyxl; reads the Day 2 dataset
 ```
 
-## Still to come
+## Day 3 shape
 
-- Day 3 capstone deck and brief
-- Practice quiz and exam (not yet decided)
+09:00 final assessment (30 min) → 09:30 capstone build (7 teams of two, scenarios S1–S7,
+four deliverables on timed blocks) → 11:45 six-minute team presentations → 12:30
+certificates and close. Each team gets its own self-contained scenario workbook
+(`alshaya-capstone-s1.xlsx` … `s7.xlsx`) — same fictional portfolio, but every team
+uploads one file with everything its scenario needs.

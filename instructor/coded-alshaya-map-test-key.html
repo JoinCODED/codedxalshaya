@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Answer Key · MAP Test — CODED × Alshaya</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%230A0507%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%227%22%20fill%3D%22%23C8324A%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#0A0507; --surf:#150A0D; --surf2:#1C0E12; --card:#130A0C;
+  --maroon:#5D181A; --mid:#8B1E2A; --crimson:#C8324A; --rose:#E0566E; --rose-lt:#EC8B9C;
+  --ink:#F5F0F1; --ink-dim:#AEA2A5; --ink-faint:#76696C;
+  --w9:rgba(255,255,255,.9); --w8:rgba(255,255,255,.82); --w6:rgba(255,255,255,.58);
+  --w5:rgba(255,255,255,.46); --w4:rgba(255,255,255,.34); --w2:rgba(255,255,255,.16);
+  --w1:rgba(255,255,255,.09); --w06:rgba(255,255,255,.06);
+  --line:rgba(255,255,255,.08); --amber:#E9C46A; --green-lt:#8FE6AE;
+  --f:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(1100px 640px at 85% -8%,rgba(200,50,74,.12),transparent 60%),var(--base);
+  color:var(--ink);font-family:var(--f);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.bar{position:sticky;top:0;z-index:30;background:rgba(10,5,7,.9);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);padding:14px 0}
+.bar .in{max-width:900px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:14px}
+.backlink{font-weight:700;font-size:13px;color:var(--w6);background:var(--w06);
+  border:1px solid var(--w1);border-radius:8px;padding:6px 11px}
+.backlink:hover{color:var(--ink)}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.3px;font-size:16px}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:var(--crimson);box-shadow:0 0 10px var(--crimson)}
+.brand b{color:var(--rose-lt);font-weight:800}
+.wrap{max-width:900px;margin:0 auto;padding:38px 28px 80px}
+.eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--rose);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:32px;height:1px;background:var(--crimson)}
+h1{font-size:clamp(30px,4.4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.06;margin:18px 0 14px}
+.lede{font-size:16px;line-height:1.62;color:var(--ink-dim);max-width:660px}
+.warn{margin-top:22px;background:linear-gradient(135deg,rgba(233,196,106,.10),rgba(233,196,106,.02));
+  border:1px solid rgba(233,196,106,.34);border-left:3px solid var(--amber);border-radius:12px;padding:16px 20px}
+.warn .k{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--amber);margin-bottom:7px}
+.warn p{font-size:14.5px;line-height:1.55;color:var(--w8)}
+h2{font-size:18px;font-weight:700;letter-spacing:-.01em;margin:44px 0 4px}
+.h2sub{font-size:13.5px;color:var(--ink-faint);margin-bottom:10px}
+.card{background:linear-gradient(180deg,var(--surf2),var(--surf));border:1px solid var(--w1);
+  border-left:3px solid var(--crimson);border-radius:16px;padding:20px 22px 18px;margin-top:18px}
+.ch-top{display:flex;align-items:center;gap:12px;margin-bottom:11px;flex-wrap:wrap}
+.num{font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:var(--crimson);
+  border-radius:6px;padding:4px 9px}
+.cat{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--rose-lt)}
+.where{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--w5)}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.3px;margin-bottom:10px}
+.rows{display:flex;flex-direction:column;gap:9px;margin:12px 0 4px}
+.row{display:flex;gap:13px;align-items:flex-start;border-radius:11px;padding:12px 15px;font-size:14.5px;line-height:1.5}
+.row .m{font-family:var(--mono);font-weight:700;font-size:14px;flex:none}
+.row.says{background:var(--w06);border:1px solid var(--w1);color:var(--w6)}
+.row.says .m{color:var(--w4)}
+.row.truth{background:rgba(200,50,74,.10);border:1px solid rgba(200,50,74,.32);color:var(--w9)}
+.row.truth .m{color:var(--rose)}
+.row b{color:#fff;font-weight:700}
+.point{margin-top:14px;background:rgba(233,196,106,.07);border:1px solid rgba(233,196,106,.26);
+  border-radius:11px;padding:13px 16px;font-size:14px;line-height:1.5;color:var(--w8)}
+.point .k{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--amber);margin-bottom:6px}
+.tbl{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+.tbl th{text-align:left;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--rose-lt);padding:10px 12px;border-bottom:1px solid var(--w2)}
+.tbl td{padding:11px 12px;border-bottom:1px solid var(--w06);color:var(--w8);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td:first-child{font-family:var(--mono);font-size:12px;color:var(--rose-lt);white-space:nowrap}
+.foot{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:12px;color:var(--ink-faint);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+<style>
+.tbl td.ansc{font-family:var(--mono);font-size:12px;font-weight:700;color:#fff;white-space:nowrap}
+.tbl td.ansc span{background:var(--crimson);border-radius:6px;padding:3px 8px;display:inline-block}
+.qcard{background:linear-gradient(180deg,var(--surf2),var(--surf));border:1px solid var(--w1);
+  border-left:3px solid var(--crimson);border-radius:14px;padding:17px 20px 15px;margin-top:14px}
+.qtop{display:flex;align-items:center;gap:11px;margin-bottom:9px;flex-wrap:wrap}
+.qstem{font-size:15px;font-weight:700;line-height:1.45;color:#fff;margin-bottom:10px}
+.opts{display:flex;flex-direction:column;gap:6px;margin-bottom:11px}
+.opt{display:flex;gap:11px;align-items:flex-start;border-radius:9px;padding:9px 13px;
+  font-size:14px;line-height:1.45;background:var(--w06);border:1px solid var(--w1);color:var(--w6)}
+.opt .m{font-family:var(--mono);font-weight:700;font-size:13px;flex:none;color:var(--w4)}
+.opt.ok{background:rgba(200,50,74,.10);border-color:rgba(200,50,74,.32);color:var(--w9)}
+.opt.ok .m{color:var(--rose)}
+.why{font-size:13.5px;line-height:1.55;color:var(--w8);border-top:1px solid var(--w06);padding-top:10px}
+.why b{color:#fff}
+.pill{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--rose-lt);background:rgba(200,50,74,.13);border:1px solid rgba(200,50,74,.26);
+  border-radius:5px;padding:3px 7px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:14px}
+.mini{background:var(--w06);border:1px solid var(--w1);border-radius:12px;padding:14px 16px}
+.mini .k{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--rose-lt);margin-bottom:7px}
+.mini p{font-size:13.5px;line-height:1.5;color:var(--w8)}
+.mini .big{font-size:26px;font-weight:800;letter-spacing:-.02em;color:#fff;margin-bottom:4px}
+</style>
+<body>
+<div class="bar"><div class="in">
+  <a class="backlink" href="../site/coded-alshaya-day-3.html">&lsaquo; Day 3</a>
+  <span class="brand"><span class="dot"></span>MAP Answer <b>Key</b></span>
+</div></div>
+
+<div class="wrap">
+  <div class="eyebrow">Instructor only &middot; Pre-course &amp; post-course assessment</div>
+  <h1>MAP test &mdash; answer key</h1>
+  <p class="lede">Twenty scored questions, thirty minutes, sat twice: on Day&nbsp;1 before teaching begins and
+  again on Day&nbsp;3 before the capstone. The same paper both times. The gap between the two scores is the
+  measure of what the workshop added.</p>
+
+  <div class="warn">
+    <div class="k">Do not hand this out &mdash; and do not review answers on Day 1</div>
+    <p>Trainees sit the identical paper twice. If they leave Day&nbsp;1 knowing which answers were right, the
+    Day&nbsp;3 score measures their memory of the debrief rather than their learning. Say only that the paper
+    returns on Day&nbsp;3, and move straight into the first session.</p>
+  </div>
+
+  <h2>Answer key at a glance</h2>
+  <div class="h2sub">One mark per question. No half marks, no penalty for a wrong answer.</div>
+  <table class="tbl">
+    <tr><th>Q</th><th>Type</th><th>Answer</th><th>Concept</th><th>Taught in</th></tr>
+    <tr><td>1</td><td>True / False</td><td class="ansc"><span>TRUE</span></td><td>How an LLM produces text</td><td>Day 1 · §01 What is an LLM?</td></tr>
+    <tr><td>2</td><td>True / False</td><td class="ansc"><span>FALSE</span></td><td>Iterative prompting</td><td>Day 1 · §04 Refine, Don&#x27;t Restart</td></tr>
+    <tr><td>3</td><td>True / False</td><td class="ansc"><span>FALSE</span></td><td>Confidential data handling</td><td>Day 1 · §01 What Can You Safely Type Into AI?</td></tr>
+    <tr><td>4</td><td>True / False</td><td class="ansc"><span>FALSE</span></td><td>Interpretation stays human</td><td>Day 2 · §03 What AI can and cannot do with data</td></tr>
+    <tr><td>5</td><td>True / False</td><td class="ansc"><span>TRUE</span></td><td>Export is a draft</td><td>Day 2 · §02 Features worth knowing — Export</td></tr>
+    <tr><td>6</td><td>True / False</td><td class="ansc"><span>TRUE</span></td><td>Skill transfers between tools</td><td>Day 1 · §01 Four names you&#x27;ll hear</td></tr>
+    <tr><td>7</td><td>Multiple choice</td><td class="ansc"><span>B</span></td><td>CTFT framework</td><td>Day 1 · §03 The CTFT Framework</td></tr>
+    <tr><td>8</td><td>Multiple choice</td><td class="ansc"><span>D</span></td><td>What &quot;large&quot; means</td><td>Day 1 · §01 What makes an LLM large?</td></tr>
+    <tr><td>9</td><td>Multiple choice</td><td class="ansc"><span>A</span></td><td>Strong at vs. weak at</td><td>Day 1 · §01 What AI Does Well vs. Where It Fails</td></tr>
+    <tr><td>10</td><td>Multiple choice</td><td class="ansc"><span>C</span></td><td>Format</td><td>Day 1 · §03 F = Format</td></tr>
+    <tr><td>11</td><td>Multiple choice</td><td class="ansc"><span>B</span></td><td>MCP connectors</td><td>Day 1 · §04 Connect it straight to your inbox</td></tr>
+    <tr><td>12</td><td>Multiple choice</td><td class="ansc"><span>D</span></td><td>Prompt library design</td><td>Day 2 · §05 What makes a saved prompt worth keeping</td></tr>
+    <tr><td>13</td><td>Multiple choice</td><td class="ansc"><span>A</span></td><td>The hybrid approach</td><td>Day 2 · §01 The hybrid approach</td></tr>
+    <tr><td>14</td><td>Multiple choice</td><td class="ansc"><span>C</span></td><td>Tool selection</td><td>Day 2 · §02 Which one, when?</td></tr>
+    <tr><td>15</td><td>Scenario</td><td class="ansc"><span>C</span></td><td>Diagnosing a weak prompt</td><td>Day 1 · §03 CTFT · Weak Prompt vs. Strong Prompt</td></tr>
+    <tr><td>16</td><td>Scenario</td><td class="ansc"><span>A</span></td><td>Confidential data handling</td><td>Day 1 · §01 What Can You Safely Type Into AI?</td></tr>
+    <tr><td>17</td><td>Scenario</td><td class="ansc"><span>D</span></td><td>Verifying a number</td><td>Day 2 · §03 Three rules for analysing data with Claude</td></tr>
+    <tr><td>18</td><td>Scenario</td><td class="ansc"><span>B</span></td><td>Rewrite, don&#x27;t restart</td><td>Day 1 · §04 Rewrite: tone and length</td></tr>
+    <tr><td>19</td><td>Scenario</td><td class="ansc"><span>A</span></td><td>Prompt quality</td><td>Day 2 · §01 Weak prompt vs. strong prompt</td></tr>
+    <tr><td>20</td><td>Scenario</td><td class="ansc"><span>C</span></td><td>Order of work</td><td>Day 2 · §03 Three rules · §04 The AI + Excel hybrid</td></tr>
+  </table>
+
+  <h2>Scoring and what the numbers mean</h2>
+  <div class="h2sub">Score each sitting out of 20, then work with the difference rather than the totals.</div>
+  <div class="grid2">
+    <div class="mini"><div class="k">Expected Day 1</div><div class="big">6 &ndash; 10</div>
+      <p>Roughly a third to a half. Pure guessing scores about 5. A Day&nbsp;1 score above 14 means the
+      trainee arrived experienced &mdash; note it, and give them the harder scenario on Day&nbsp;3.</p></div>
+    <div class="mini"><div class="k">Target Day 3</div><div class="big">16 &ndash; 19</div>
+      <p>Eighty per cent or better. A full 20 is realistic for several trainees; a Day&nbsp;3 score below 13
+      needs a quiet conversation before the capstone teams are drawn.</p></div>
+    <div class="mini"><div class="k">Healthy gain</div><div class="big">+7 or more</div>
+      <p>The headline figure for the client report. Report the cohort mean gain, not the mean score &mdash;
+      it is the gain that the workshop is accountable for.</p></div>
+    <div class="mini"><div class="k">Watch items</div><div class="big">3 &middot; 16 &middot; 17</div>
+      <p>Confidential data and number verification. These carry real risk back to the desk, so treat
+      anything under 90% correct on Day&nbsp;3 as a reteach, whatever the total score says.</p></div>
+  </div>
+
+  <div class="point" style="margin-top:18px"><div class="k">Reading the item analysis</div>
+  Compare each question across the two sittings, not just the totals. A question that stays wrong for most
+  of the room is a gap in the teaching, not in the trainees &mdash; note it for the next delivery. A question
+  that most of the room already answered correctly on Day&nbsp;1 is teaching time you can reinvest.</div>
+
+  <div class="point" style="margin-top:12px"><div class="k">Pairing the two sittings</div>
+  Responses are named, and the survey asks which sitting the trainee is taking. Match on the name field to
+  build the pre/post pair for each person. The confidence question is not scored &mdash; it is there because
+  confidence and score sometimes move apart, and a trainee whose confidence rose faster than their score is
+  the one most likely to send an unverified number to a director.</div>
+
+  <h2>Part 1 &mdash; True or False</h2>
+  <div class="h2sub">Questions 1&ndash;6 &middot; one mark each &middot; about four minutes.</div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q1</span><span class="pill">Answer: TRUE</span><span class="where">Day 1 · §01 What is an LLM?</span></div>
+    <div class="qstem">An AI language model writes its answer by predicting one word at a time, based on patterns in language.</div>
+    <div class="why">This is the core mental model of the whole workshop. The model predicts the pattern; it is not looking anything up. Trainees who hold this belief understand <b>why</b> a model can be fluent and wrong at the same time, so every later lesson about verification follows from it. Pre-course, most people answer FALSE because they assume AI searches a database.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q2</span><span class="pill">Answer: FALSE</span><span class="where">Day 1 · §04 Refine, Don&#x27;t Restart</span></div>
+    <div class="qstem">When an AI draft is nearly right, the best step is to open a new chat and write the prompt again from the start.</div>
+    <div class="why">Tests iterative prompting. The correct move is a small correction in the same conversation — "make it shorter", "make it warmer". Restarting throws away the context that was already working. This is the single habit that most changes how fast a beginner works.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q3</span><span class="pill">Answer: FALSE</span><span class="where">Day 1 · §01 What Can You Safely Type Into AI?</span></div>
+    <div class="qstem">Tenant records and contract terms are safe to paste into a public AI tool if you delete the chat afterwards.</div>
+    <div class="why">The data-handling rule, with the most common excuse attached to it. Deleting the chat afterwards does not undo the disclosure. Watch this item closely — it is the one where a wrong answer carries real risk back to the desk, so if the post-course score on it is not near 100%, reteach it before the capstone.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q4</span><span class="pill">Answer: FALSE</span><span class="where">Day 2 · §03 What AI can and cannot do with data</span></div>
+    <div class="qstem">An AI tool can judge whether a financial result is good or bad for your company.</div>
+    <div class="why">Separates calculation from interpretation. The model can compute the variance; it cannot know that 8% over budget is routine in one department and an emergency in another. That judgment stays with the trainee, and it is what their job actually is.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q5</span><span class="pill">Answer: TRUE</span><span class="where">Day 2 · §02 Features worth knowing — Export</span></div>
+    <div class="qstem">A file exported from an AI presentation tool into PowerPoint can arrive with different spacing and fonts.</div>
+    <div class="why">A small practical fact with a large consequence: the export is a draft, not a finished deck. Trainees who miss this present a broken deck to a director once, and only once.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q6</span><span class="pill">Answer: TRUE</span><span class="where">Day 1 · §01 Four names you&#x27;ll hear</span></div>
+    <div class="qstem">Prompting skill learned in one AI tool carries over to other AI tools.</div>
+    <div class="why">"The prompt is the skill, not the logo." This matters commercially: it is the answer to "what happens when our company standardises on a different tool?" Some trainees answer FALSE pre-course because they assume each tool must be learned separately.</div>
+  </div>
+
+  <h2>Part 2 &mdash; Multiple choice</h2>
+  <div class="h2sub">Questions 7&ndash;14 &middot; one mark each &middot; about ten minutes.</div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q7</span><span class="pill">Answer: B</span><span class="where">Day 1 · §03 The CTFT Framework</span></div>
+    <div class="qstem">In the prompting framework taught in this course, what do the letters CTFT stand for?</div>
+    <div class="opts">
+      <div class="opt"><span class="m">A</span><div>Content, Target, Function, Timing</div></div>
+      <div class="opt ok"><span class="m">B</span><div>Context, Task, Format, Tone</div></div>
+      <div class="opt"><span class="m">C</span><div>Clarity, Topic, Feedback, Test</div></div>
+      <div class="opt"><span class="m">D</span><div>Context, Topic, Focus, Timing</div></div>
+    </div>
+    <div class="why">Pure recall of the spine of the workshop. Expect near-zero pre-course and near-100% post-course — this item is the clearest single signal that Day 1 landed. All four options share the same shape, and two of them start with "Context", so a trainee cannot reach the answer by elimination.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q8</span><span class="pill">Answer: D</span><span class="where">Day 1 · §01 What makes an LLM large?</span></div>
+    <div class="qstem">In the term &quot;large language model&quot;, what does the word &quot;large&quot; describe?</div>
+    <div class="opts">
+      <div class="opt"><span class="m">A</span><div>The number of human languages that the model can read and write</div></div>
+      <div class="opt"><span class="m">B</span><div>The maximum size of the file that you are allowed to upload</div></div>
+      <div class="opt"><span class="m">C</span><div>The greatest length of answer that the model can produce</div></div>
+      <div class="opt ok"><span class="m">D</span><div>The volume of text it learned from and the number of settings it holds</div></div>
+    </div>
+    <div class="why">"Large is about scale, not intelligence." Option A is the intuitive wrong answer and usually leads pre-course. If option A still leads post-course, the foundations session needs more time on the next run.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q9</span><span class="pill">Answer: A</span><span class="where">Day 1 · §01 What AI Does Well vs. Where It Fails</span></div>
+    <div class="qstem">Which of these tasks is an AI tool strongest at?</div>
+    <div class="opts">
+      <div class="opt ok"><span class="m">A</span><div>Writing a first draft of a report</div></div>
+      <div class="opt"><span class="m">B</span><div>Confirming a figure held in your company&#x27;s private records</div></div>
+      <div class="opt"><span class="m">C</span><div>Making the final decision on a contract renewal</div></div>
+      <div class="opt"><span class="m">D</span><div>Correcting data that was already wrong before it reached you</div></div>
+    </div>
+    <div class="why">Every wrong option is taken directly from the taught "weak at" list — private context, final judgment, and bad source data. A trainee who has the strong/weak split straight answers this quickly.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q10</span><span class="pill">Answer: C</span><span class="where">Day 1 · §03 F = Format</span></div>
+    <div class="qstem">Which part of a prompt states how long the answer should be and how it should be arranged?</div>
+    <div class="opts">
+      <div class="opt"><span class="m">A</span><div>Context</div></div>
+      <div class="opt"><span class="m">B</span><div>Tone</div></div>
+      <div class="opt ok"><span class="m">C</span><div>Format</div></div>
+      <div class="opt"><span class="m">D</span><div>Task</div></div>
+    </div>
+    <div class="why">Checks that CTFT is understood as four distinct jobs, not memorised as a word. The common confusion is Format with Task, so watch for option D.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q11</span><span class="pill">Answer: B</span><span class="where">Day 1 · §04 Connect it straight to your inbox</span></div>
+    <div class="qstem">What does an MCP (Model Context Protocol) connector allow an AI assistant to do?</div>
+    <div class="opts">
+      <div class="opt"><span class="m">A</span><div>Run on your computer without an internet connection</div></div>
+      <div class="opt ok"><span class="m">B</span><div>Work inside tools you already use, such as mail, calendar and files</div></div>
+      <div class="opt"><span class="m">C</span><div>Check that every fact in a draft is correct</div></div>
+      <div class="opt"><span class="m">D</span><div>Store your prompts so that other staff can reuse them</div></div>
+    </div>
+    <div class="why">The hardest recall item on the paper, and the most forward-looking — it is the difference between copy-and-paste and the tool working in place. Pair a low score here with the reminder that nobody connects anything before IT and their manager approve it.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q12</span><span class="pill">Answer: D</span><span class="where">Day 2 · §05 What makes a saved prompt worth keeping</span></div>
+    <div class="qstem">What makes a saved prompt worth keeping in a prompt library?</div>
+    <div class="opts">
+      <div class="opt"><span class="m">A</span><div>It is short enough to remember without writing it down</div></div>
+      <div class="opt"><span class="m">B</span><div>It was written by a senior person in your department</div></div>
+      <div class="opt"><span class="m">C</span><div>It produced a result that needed no editing at all</div></div>
+      <div class="opt ok"><span class="m">D</span><div>It has a clear title and placeholders where the details change</div></div>
+    </div>
+    <div class="why">Tests whether the prompt library is understood as reusable infrastructure rather than a folder of past chats. The placeholder idea is what makes a prompt survive contact with next month's data.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q13</span><span class="pill">Answer: A</span><span class="where">Day 2 · §01 The hybrid approach</span></div>
+    <div class="qstem">Which way of using AI to build a presentation was recommended in this course?</div>
+    <div class="opts">
+      <div class="opt ok"><span class="m">A</span><div>Let AI build the outline and first draft, then add your own numbers and judgment</div></div>
+      <div class="opt"><span class="m">B</span><div>Let AI build the finished deck, then present it without any changes</div></div>
+      <div class="opt"><span class="m">C</span><div>Build the deck yourself, then ask AI to improve the design at the end</div></div>
+      <div class="opt"><span class="m">D</span><div>Build half of the slides yourself and let AI build the other half</div></div>
+    </div>
+    <div class="why">"AI drafts. You own the version that gets presented." Option B is the failure mode the workshop exists to prevent; option D is a plausible-sounding split that misses the point, because the division of labour is by <b>stage</b>, not by slide count.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q14</span><span class="pill">Answer: C</span><span class="where">Day 2 · §02 Which one, when?</span></div>
+    <div class="qstem">When is PowerPoint still a better choice than an AI presentation tool?</div>
+    <div class="opts">
+      <div class="opt"><span class="m">A</span><div>When you need a first draft of the deck quickly</div></div>
+      <div class="opt"><span class="m">B</span><div>When you want to change the style of every slide at once</div></div>
+      <div class="opt ok"><span class="m">C</span><div>When you must follow a company template and place each element exactly</div></div>
+      <div class="opt"><span class="m">D</span><div>When you want to send the deck to a colleague as a PDF file</div></div>
+    </div>
+    <div class="why">Checks honest tool selection. Options A, B and D are each a job an AI tool does <b>better</b>, so the trainee has to know all four capabilities to answer. A correct answer here signals judgment rather than enthusiasm.</div>
+  </div>
+
+  <h2>Part 3 &mdash; Work scenarios</h2>
+  <div class="h2sub">Questions 15&ndash;20 &middot; one mark each &middot; about fourteen minutes.</div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q15</span><span class="pill">Answer: C</span><span class="where">Day 1 · §03 CTFT · Weak Prompt vs. Strong Prompt</span></div>
+    <div class="qstem">You manage leasing. You ask an AI tool: &quot;Write something about the new parking policy.&quot; The answer is general and does not fit your building. What is the main reason?</div>
+    <div class="opts">
+      <div class="opt"><span class="m">A</span><div>The policy is too recent for the AI tool to know about it</div></div>
+      <div class="opt"><span class="m">B</span><div>The request should have been sent as a document, not as a chat message</div></div>
+      <div class="opt ok"><span class="m">C</span><div>The prompt gave no background, no structure and no tone</div></div>
+      <div class="opt"><span class="m">D</span><div>The AI tool you used was the wrong one for this kind of task</div></div>
+    </div>
+    <div class="why">Diagnosis, not recall: the trainee must look at a bad result and locate the cause in their own prompt. Options A and D both blame the tool, which is exactly the pre-course instinct the workshop sets out to correct. This is the highest-value scenario on the paper.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q16</span><span class="pill">Answer: A</span><span class="where">Day 1 · §01 What Can You Safely Type Into AI?</span></div>
+    <div class="qstem">Your manager asks you for a summary of a confidential supplier contract. What should you do first?</div>
+    <div class="opts">
+      <div class="opt ok"><span class="m">A</span><div>Ask your manager or IT which tools are approved before you upload anything</div></div>
+      <div class="opt"><span class="m">B</span><div>Remove the supplier name, then paste the rest into a public AI tool</div></div>
+      <div class="opt"><span class="m">C</span><div>Paste the contract into a public AI tool and delete the chat afterwards</div></div>
+      <div class="opt"><span class="m">D</span><div>Summarise only the first ten pages, so that less of the contract is exposed</div></div>
+    </div>
+    <div class="why">Options B and D are the dangerous ones, because both feel careful. Removing a name does not de-confidentialise commercial terms, and exposing a quarter of a contract is still exposing a contract. Partial caution is the most common real-world failure, so name it in the debrief.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q17</span><span class="pill">Answer: D</span><span class="where">Day 2 · §03 Three rules for analysing data with Claude</span></div>
+    <div class="qstem">An AI tool reports that maintenance spending is 18 percent over budget. You want to put that figure in a report for the director. What should you do before you send the report?</div>
+    <div class="opts">
+      <div class="opt"><span class="m">A</span><div>Ask the AI tool to repeat the calculation in a new chat</div></div>
+      <div class="opt"><span class="m">B</span><div>Ask the AI tool to show the same figure as a chart</div></div>
+      <div class="opt"><span class="m">C</span><div>Round the figure down, so that the report stays careful</div></div>
+      <div class="opt ok"><span class="m">D</span><div>Recalculate the figure yourself from the source sheet</div></div>
+    </div>
+    <div class="why">Option A is the trap: asking the same model again is not verification, it is a second opinion from the same source. Verification means leaving the tool and going back to the sheet. This item is the direct rehearsal for the capstone rule of one verified number per chart.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q18</span><span class="pill">Answer: B</span><span class="where">Day 1 · §04 Rewrite: tone and length</span></div>
+    <div class="qstem">You wrote a tenant notice with AI. The facts are correct, but it sounds cold and it is twice as long as you need. What is the most efficient next step?</div>
+    <div class="opts">
+      <div class="opt"><span class="m">A</span><div>Write a new prompt in a new chat that includes the tone and the length</div></div>
+      <div class="opt ok"><span class="m">B</span><div>In the same conversation, ask for a warmer tone and half the length</div></div>
+      <div class="opt"><span class="m">C</span><div>Edit the whole notice by hand until it is right</div></div>
+      <div class="opt"><span class="m">D</span><div>Generate the notice again in a different AI tool</div></div>
+    </div>
+    <div class="why">Iterative prompting again, but applied rather than stated — pair the result with question 2. A trainee who answers 2 correctly and 18 wrongly knows the rule but has not yet made it a habit, which is a coaching problem, not a knowledge gap.</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q19</span><span class="pill">Answer: A</span><span class="where">Day 2 · §01 Weak prompt vs. strong prompt</span></div>
+    <div class="qstem">You need slides about a new maintenance request system. Which prompt is most likely to give you a usable first draft?</div>
+    <div class="opts">
+      <div class="opt ok"><span class="m">A</span><div>&quot;Create a 5-slide presentation for property managers about the new maintenance request system. Cover the problem, the new process, staff responsibilities and the launch date. Professional tone.&quot;</div></div>
+      <div class="opt"><span class="m">B</span><div>&quot;Create a professional presentation for our property managers that explains the maintenance request system and the reasons we are changing it.&quot;</div></div>
+      <div class="opt"><span class="m">C</span><div>&quot;Create a short, well-designed set of slides on maintenance requests for the management team, covering everything that they need to know.&quot;</div></div>
+      <div class="opt"><span class="m">D</span><div>&quot;Make a clear presentation about the new maintenance request system for the managers in our property team.&quot;</div></div>
+    </div>
+    <div class="why">All four options name an audience and sound professional, so length and politeness cannot decide it. Only option A fixes the slide count and lists the ground to cover — it is the only one with Format. Distractor C is deliberately the vaguest while using the most confident words ("well-designed", "everything they need").</div>
+  </div>
+  <div class="qcard">
+    <div class="qtop"><span class="num">Q20</span><span class="pill">Answer: C</span><span class="where">Day 2 · §03 Three rules · §04 The AI + Excel hybrid</span></div>
+    <div class="qstem">Your team must present findings to the operations director tomorrow. You have a spreadsheet of 200 rows and two hours. Which order of work fits the method taught in this course?</div>
+    <div class="opts">
+      <div class="opt"><span class="m">A</span><div>Build the slides first, then ask AI to check whether the numbers are right</div></div>
+      <div class="opt"><span class="m">B</span><div>Ask AI every question in one long prompt, then copy the answer into the slides</div></div>
+      <div class="opt ok"><span class="m">C</span><div>Ask AI one clear question at a time, verify the key numbers by hand, then build the slides</div></div>
+      <div class="opt"><span class="m">D</span><div>Clean the whole sheet by hand first, then let AI build the slides and use its figures</div></div>
+    </div>
+    <div class="why">The synthesis item, and the closest thing on the paper to the capstone itself. It carries all three rules at once: one question at a time, verify by hand, and analysis before presentation. Option D is the seductive wrong answer, because the hand-cleaning at the front makes it feel rigorous while the figures still go unverified at the end.</div>
+  </div>
+
+  <div class="foot">
+    <span>CODED &times; Alshaya &middot; MAP test &middot; Instructor answer key</span>
+    <span>20 questions &middot; 30 minutes &middot; sat on Day 1 and Day 3</span>
+  </div>
+</div>
+</body>
+</html>
