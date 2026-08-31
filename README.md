@@ -59,9 +59,24 @@ never deploy and trainees cannot stumble on them. Open them locally for the debr
 ## MAP test
 
 `instructor/coded-alshaya-map-test-key.html` is the answer key for the pre/post knowledge test —
-20 questions, 30 minutes, sat twice: Day 1 before teaching starts, and Day 3 before the capstone.
-The test itself lives in the CODED portal as the draft survey
-**Alshaya MAP Test — AI in Workflow (Pre & Post)** (`alshaya-map-test-ai-in-workflow-pre-post`).
+30 questions (10 true/false, 11 multiple choice, 9 scenarios), timed at 28m 25s against a 30-minute
+slot, sat twice: Day 1 before teaching starts, and Day 3 before the capstone.
+The test itself lives in the CODED portal as two published surveys, one per sitting. Both pages link
+to theirs from the day page and the resources list.
+
+| Survey | Linked from | Portal slug |
+|---|---|---|
+| MAP pre — Day 1, before class | `coded-alshaya-day-1.html` | `alshaya-map-test-ai-in-workflow-pre-copy` |
+| MAP post — Day 3, before the capstone | `coded-alshaya-day-3.html` | `alshaya-map-test-ai-in-workflow-pre-post` |
+| Workshop feedback — Day 3, at the close | `coded-alshaya-day-3.html` | `alshayaa-ai-for-workplace` |
+
+The feedback survey is a separate 16-question satisfaction form (overall experience, topic
+understanding, instructor, open comments), owned by yousif.d@joincoded.com — not one of the MAP pair.
+
+Note that the portal's survey **titles are the reverse of this mapping** — the survey used on Day 1 is
+titled "(Post)" and vice versa. Rename them in the portal UI before Day 1, or trainees will see the
+wrong label at the top of the page.
+
 The key stays outside `site/` with the other instructor material, so it never deploys.
 
 ## Rebuilding
